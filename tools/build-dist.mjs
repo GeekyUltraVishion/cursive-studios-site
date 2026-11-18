@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = path.join(ROOT, 'dist');
-const SKIP = new Set(['dist', 'tools', 'node_modules', 'CLAUDE.md', 'netlify.toml', 'vercel.json']);
+const SKIP = new Set(['dist', 'tools', 'node_modules', 'CLAUDE.md', 'DEPLOY.md', 'netlify.toml', 'vercel.json']);
 
 fs.rmSync(OUT, { recursive: true, force: true });
 let count = 0;
