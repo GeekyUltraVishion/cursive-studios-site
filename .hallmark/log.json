@@ -1,0 +1,33 @@
+[
+ {
+  "shape": "Studio Index",
+  "theme": "midnight",
+  "axes": "dark/grotesk-sans/cool",
+  "hero": "Stage",
+  "nav": "edge-aligned",
+  "footer": "statement",
+  "imagery": "photographs",
+  "photos": [
+   "Hallway_to_Nowhere_(3098664168).jpg",
+   "Woman_taking_a_dropper_of_CBD_oil.jpg",
+   "Crest_kitchenette_motel_stairwell.jpg",
+   "Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
+   "Cure_cocktail_bar_New_Orleans_2011.jpg"
+  ],
+  "entry": "index.html",
+  "fingerprint": "stage/services-wells/work-9x16/steps-band/contact-statement",
+  "sections": [
+   "hero",
+   "services",
+   "work",
+   "steps",
+   "contact",
+   "footer"
+  ],
+  "signature": "the work in 9:16 frames",
+  "waived": [],
+  "prompt": "Cursive Studios homepage",
+  "date": "2026-11-18",
+  "mode": "build"
+ }
+]

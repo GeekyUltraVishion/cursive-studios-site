@@ -1,0 +1,4 @@
+# Publishes only the site files (not the .claude tooling) from dist/.
+[build]
+  command = "rsync -a --exclude '.*' --exclude 'CLAUDE.md' --exclude 'netlify.toml' --exclude 'vercel.json' --exclude 'dist' ./ dist/"
+  publish = "dist"

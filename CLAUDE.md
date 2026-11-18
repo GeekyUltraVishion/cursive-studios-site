@@ -39,7 +39,20 @@ Plain HTML, CSS and JavaScript (no framework). Three.js for 3D, loaded only wher
 
 ## Repository state
 
-No site code exists yet: there is no build step, package.json or test suite. The only content is the vendored Hallmark design skill in `.claude/skills/hallmark/`. Add the real run/preview commands here once the first pages exist.
+Static site, no build step or package.json. The homepage is built; service pages (`services/*.html`) are linked but not built yet.
+
+- `index.html`: the homepage. `js/main.js`: mobile menu, and fills contact links and featured work from `content/data.json` (the HTML holds the same content as a no-JS fallback, so keep the two in step).
+- `css/settings.css`: every colour and both fonts (the one file to restyle the site). `css/tokens.css`: spacing/type scale. `css/base.css`: Hallmark scaffold base. `css/main.css`: page styles, starting with the Hallmark stamp.
+- `content/`: `videos/`, `images/`, `data.json` (see `content/README.md`). Entries with `"placeholder": true` are Wikimedia stand-ins shown in duotone and credited in the footer.
+- Hallmark design: theme Midnight, build log in `.hallmark/log.json`.
+
+Run locally (the JSON fetch needs http, not `file://`):
+
+```bash
+npx http-server -p 4173 -c-1 .
+```
+
+Deploy: Vercel uses `vercel.json` + `.vercelignore`; Netlify copies site files into `dist/` (`netlify.toml`) so `.claude/` is never published.
 
 ## Design: Hallmark skill
 
