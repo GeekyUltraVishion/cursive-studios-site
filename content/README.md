@@ -20,7 +20,7 @@ Add an entry to `work` in `data.json` (the first four are shown on the homepage)
 }
 ```
 
-Your own work shows in its true colours. Entries marked `"placeholder": true` are library stand-ins and are shown in the site's blue duotone; delete them as your own work comes in, along with their `credit`.
+Your own work shows in its true colours. Entries marked `"placeholder": true` are library stand-ins and are tinted to match the site; delete them as your own work comes in, along with their `credit`.
 
 ## Contact details
 
