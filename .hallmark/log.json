@@ -2,6 +2,37 @@
  {
   "shape": "Studio Index",
   "theme": "midnight",
+  "axes": "dark/grotesk-sans/warm",
+  "hero": "Banner over letterbox",
+  "nav": "edge-aligned",
+  "footer": "colophon",
+  "imagery": "photographs",
+  "photos": [
+   "Hallway_to_Nowhere_(3098664168).jpg",
+   "Woman_taking_a_dropper_of_CBD_oil.jpg",
+   "Crest_kitchenette_motel_stairwell.jpg",
+   "Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
+   "Cure_cocktail_bar_New_Orleans_2011.jpg"
+  ],
+  "entry": "index.html",
+  "fingerprint": "letterbox/index/contact-sheet/footnoted-statement/end-credits",
+  "sections": [
+   "hero",
+   "services-index",
+   "work",
+   "process-statement",
+   "credits",
+   "footer"
+  ],
+  "signature": "letterboxed opening and end-credits close",
+  "waived": [],
+  "prompt": "Cursive Studios homepage, de-slopped",
+  "date": "2026-11-18",
+  "mode": "build"
+ },
+ {
+  "shape": "Studio Index",
+  "theme": "midnight",
   "axes": "dark/grotesk-sans/cool",
   "hero": "Stage",
   "nav": "edge-aligned",

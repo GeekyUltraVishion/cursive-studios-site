@@ -34,6 +34,7 @@
       const handle = c.instagram.replace(/^@/, '');
       document.querySelectorAll('[data-instagram-link]').forEach((a) => { a.href = `https://www.instagram.com/${handle}/`; });
       document.querySelectorAll('[data-instagram-dm]').forEach((a) => { a.href = `https://ig.me/m/${handle}`; });
+      document.querySelectorAll('[data-instagram-text]').forEach((s) => { s.textContent = `@${handle}`; });
     }
     if (c.email) {
       document.querySelectorAll('[data-email]').forEach((a) => { a.href = `mailto:${c.email}`; });
