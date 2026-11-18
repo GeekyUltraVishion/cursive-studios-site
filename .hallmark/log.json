@@ -1,5 +1,32 @@
 [
  {
+  "shape": "Reel Wall",
+  "theme": "midnight",
+  "axes": "dark/grotesk-sans/warm",
+  "hero": "Stage",
+  "nav": "edge-aligned",
+  "footer": "colophon",
+  "imagery": "the studio videos (placeholder clips)",
+  "photos": [],
+  "entry": "ai-ugc-ads.html",
+  "fingerprint": "stage-latest3/gets-grid/ad-wall/ask-band",
+  "sections": [
+   "hero+latest",
+   "gets",
+   "ads",
+   "ask",
+   "footer"
+  ],
+  "signature": "the newest three ads playing in the first screen",
+  "waived": [
+   "83",
+   "28b"
+  ],
+  "prompt": "Cursive Studios AI UGC Ads video gallery",
+  "date": "2026-11-18",
+  "mode": "build"
+ },
+ {
   "shape": "Service Sheet",
   "theme": "midnight",
   "axes": "dark/grotesk-sans/warm",

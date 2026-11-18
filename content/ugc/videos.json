@@ -1,0 +1,102 @@
+{
+  "categories": [
+    {
+      "id": "skincare",
+      "name": "Skincare"
+    },
+    {
+      "id": "supplements",
+      "name": "Supplements"
+    },
+    {
+      "id": "pet",
+      "name": "Pet"
+    },
+    {
+      "id": "food-cafe",
+      "name": "Food and Cafe"
+    },
+    {
+      "id": "fashion",
+      "name": "Fashion"
+    },
+    {
+      "id": "other",
+      "name": "Other"
+    }
+  ],
+  "videos": [
+    {
+      "file": "serum-morning-routine.mp4",
+      "thumb": "serum-morning-routine.jpg",
+      "title": "Serum morning routine",
+      "category": "skincare",
+      "date": "2026-11-14",
+      "caption": "A customer-style review of a vitamin C serum, filmed at the bathroom sink.",
+      "placeholder": true
+    },
+    {
+      "file": "protein-powder-unboxing.mp4",
+      "thumb": "protein-powder-unboxing.jpg",
+      "title": "Protein powder unboxing",
+      "category": "supplements",
+      "date": "2026-11-10",
+      "caption": "First scoop, first shake: an unboxing that answers the taste question.",
+      "placeholder": true
+    },
+    {
+      "file": "new-food-for-an-old-dog.mp4",
+      "thumb": "new-food-for-an-old-dog.jpg",
+      "title": "New food for an old dog",
+      "category": "pet",
+      "date": "2026-11-05",
+      "caption": "An owner shows how a picky senior dog took to the new food.",
+      "placeholder": true
+    },
+    {
+      "file": "flat-white-at-opening-time.mp4",
+      "thumb": "flat-white-at-opening-time.jpg",
+      "title": "Flat white at opening time",
+      "category": "food-cafe",
+      "date": "2026-10-29",
+      "caption": "A regular's walk in at 7am, for a neighbourhood cafe.",
+      "placeholder": true
+    },
+    {
+      "file": "linen-shirt-try-on.mp4",
+      "thumb": "linen-shirt-try-on.jpg",
+      "title": "Linen shirt try-on",
+      "category": "fashion",
+      "date": "2026-10-21",
+      "caption": "Three ways to wear one shirt, in a mirror try-on.",
+      "placeholder": true
+    },
+    {
+      "file": "night-cream-before-and-after.mp4",
+      "thumb": "night-cream-before-and-after.jpg",
+      "title": "Night cream before and after",
+      "category": "skincare",
+      "date": "2026-10-12",
+      "caption": "A two-week diary, cut to fifteen seconds.",
+      "placeholder": true
+    },
+    {
+      "file": "gym-membership-walkthrough.mp4",
+      "thumb": "gym-membership-walkthrough.jpg",
+      "title": "Gym membership walkthrough",
+      "category": "other",
+      "date": "2026-10-03",
+      "caption": "A first visit to a local gym, from the front desk to the weights.",
+      "placeholder": true
+    },
+    {
+      "file": "magnesium-for-better-sleep.mp4",
+      "thumb": "magnesium-for-better-sleep.jpg",
+      "title": "Magnesium for better sleep",
+      "category": "supplements",
+      "date": "2026-09-22",
+      "caption": "A night-time routine ad for a sleep supplement.",
+      "placeholder": true
+    }
+  ]
+}

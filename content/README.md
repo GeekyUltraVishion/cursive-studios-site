@@ -28,7 +28,7 @@ Set `contact.email` and `contact.instagram` (the handle, without the @), then ch
 
 ## Service galleries
 
-Each service page reads its own file: `ai-ugc-ads.json`, `motion-graphics.json`, `website-design.json`, `3d-websites.json`.
+Motion Graphics, Website Design and 3D Websites each read their own file: `motion-graphics.json`, `website-design.json`, `3d-websites.json`. The AI UGC Ads page has its own setup in `ugc/` (see `ugc/README.md`).
 
 ```json
 {
