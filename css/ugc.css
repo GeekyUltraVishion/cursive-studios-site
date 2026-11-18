@@ -2,7 +2,6 @@
  * hero: Stage, the three newest ads as the visual · nav: edge-aligned, as the homepage · footer: colophon, as the homepage · imagery: the studio's own videos (placeholder clips until real ads land) · signature: the newest three ads playing in the first screen, straight from the data file
  * axes: dark/grotesk-sans/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V3 · weakest: V, the page keeps the service template so the site reads as one; the hero trades its title card for the three newest ads */
-/* Hallmark · waive 83 · a gallery of the studio's own ads, every frame is their work · the page is the portfolio, so the pictures are the content */
 /* Hallmark · waive 28b · the player's poster is set from the ad's thumbnail each time it opens · the empty dialog never shows a bare video */
 @import url("./service.css");
 
