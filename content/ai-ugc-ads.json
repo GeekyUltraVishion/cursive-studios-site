@@ -1,0 +1,69 @@
+{
+  "styles": [],
+  "samples": [
+    {
+      "style": "",
+      "title": "Skincare brand",
+      "description": "A customer-style review of a serum, filmed at the sink.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Woman_taking_a_dropper_of_CBD_oil.jpg/960px-Woman_taking_a_dropper_of_CBD_oil.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Woman_taking_a_dropper_of_CBD_oil.jpg/1920px-Woman_taking_a_dropper_of_CBD_oil.jpg",
+      "alt": "A hand squeezing a glass dropper over a small amber bottle",
+      "focus": "45% 50%",
+      "placeholder": true,
+      "credit": {
+        "name": "elsaolofsson",
+        "url": "https://commons.wikimedia.org/wiki/File:Woman_taking_a_dropper_of_CBD_oil.jpg",
+        "licence": "CC BY 2.0"
+      }
+    },
+    {
+      "style": "",
+      "title": "Real estate",
+      "description": "A walk up to the front door, voiced like a first viewing.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/960px-Crest_kitchenette_motel_stairwell.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/1920px-Crest_kitchenette_motel_stairwell.jpg",
+      "alt": "A lit concrete stairwell glowing inside a dark building at night",
+      "focus": "55% 50%",
+      "placeholder": true,
+      "credit": {
+        "name": "Sarah Clark",
+        "url": "https://commons.wikimedia.org/wiki/File:Crest_kitchenette_motel_stairwell.jpg",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "",
+      "title": "Pet brand",
+      "description": "An owner shows how the dog took to the new food.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg/960px-Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg/1920px-Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
+      "alt": "A ginger dog swimming in dark water, looking at the camera",
+      "focus": "60% 45%",
+      "placeholder": true,
+      "credit": {
+        "name": "Basile Morin",
+        "url": "https://commons.wikimedia.org/wiki/File:Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "",
+      "title": "Cocktail bar",
+      "description": "A friend's-eye tour of the bar on a Friday night.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/960px-Cure_cocktail_bar_New_Orleans_2011.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/1920px-Cure_cocktail_bar_New_Orleans_2011.jpg",
+      "alt": "A dim cocktail bar with lit bottle shelves up to the ceiling",
+      "focus": "30% 50%",
+      "placeholder": true,
+      "credit": {
+        "name": "Chelsea Marie Hicks",
+        "url": "https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg",
+        "licence": "CC BY 2.0"
+      }
+    }
+  ]
+}

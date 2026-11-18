@@ -1,0 +1,119 @@
+{
+  "styles": [
+    {
+      "id": "3d-hero",
+      "name": "3D Hero"
+    },
+    {
+      "id": "product-showcase",
+      "name": "Product Showcase"
+    },
+    {
+      "id": "interactive-scroll",
+      "name": "Interactive Scroll"
+    },
+    {
+      "id": "virtual-tour",
+      "name": "Virtual Tour"
+    },
+    {
+      "id": "portfolio",
+      "name": "Portfolio"
+    }
+  ],
+  "samples": [
+    {
+      "style": "3d-hero",
+      "title": "Gallery opening",
+      "description": "A statue turns slowly behind the headline as the page loads.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Pinacoteca_de_Sao_Paulo.jpg/960px-Pinacoteca_de_Sao_Paulo.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Pinacoteca_de_Sao_Paulo.jpg/1920px-Pinacoteca_de_Sao_Paulo.jpg",
+      "alt": "Black and white gallery corridor with a seated statue in a shaft of sun",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Pinacoteca_de_Sao_Paulo.jpg",
+        "name": "Wilfredor",
+        "licence": "CC0"
+      }
+    },
+    {
+      "style": "product-showcase",
+      "title": "Architecture model",
+      "description": "Spin the model, then click a building to see its floor plan.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg/960px-Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg/1920px-Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg",
+      "alt": "Wooden architectural massing model of low courtyard buildings on a dark ground",
+      "focus": "40% 50%",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Architectural_Masterplan_Model_of_Lieb_Tang_Rodfai_Villas.jpg",
+        "name": "Designer Mario Kleff",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "interactive-scroll",
+      "title": "Stairwell",
+      "description": "Scroll down and the camera walks down the stairs with you.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Staircase_of_the_BGK_Building_%2826620981474%29.jpg/960px-Staircase_of_the_BGK_Building_%2826620981474%29.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Staircase_of_the_BGK_Building_%2826620981474%29.jpg/1920px-Staircase_of_the_BGK_Building_%2826620981474%29.jpg",
+      "alt": "White stair edges in a dark stairwell beside a round glowing wall lamp",
+      "focus": "75% 50%",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Staircase_of_the_BGK_Building_(26620981474).jpg",
+        "name": "Bart Lumber",
+        "licence": "CC0"
+      }
+    },
+    {
+      "style": "virtual-tour",
+      "title": "Brick gallery",
+      "description": "Walk the room and click a piece to read about it.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Pinacoteca_de_S%C3%A3o_Paulo_6.jpg/960px-Pinacoteca_de_S%C3%A3o_Paulo_6.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Pinacoteca_de_S%C3%A3o_Paulo_6.jpg/1920px-Pinacoteca_de_S%C3%A3o_Paulo_6.jpg",
+      "alt": "Gallery with brick walls, hanging glass lamps and rocking chairs on a rug",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Pinacoteca_de_S%C3%A3o_Paulo_6.jpg",
+        "name": "Wilfredor",
+        "licence": "CC0"
+      }
+    },
+    {
+      "style": "virtual-tour",
+      "title": "Apartment",
+      "description": "A furnished flat you can walk through before it is finished.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Levy_Strauss_Race_et_Histoire%2C_bass_guitar%2C_red_sofa.jpg/960px-Levy_Strauss_Race_et_Histoire%2C_bass_guitar%2C_red_sofa.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Levy_Strauss_Race_et_Histoire%2C_bass_guitar%2C_red_sofa.jpg/1920px-Levy_Strauss_Race_et_Histoire%2C_bass_guitar%2C_red_sofa.jpg",
+      "alt": "An open paperback lying on a red sofa with a bass guitar standing behind",
+      "focus": "40% 55%",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Levy_Strauss_Race_et_Histoire,_bass_guitar,_red_sofa.jpg",
+        "name": "Olivier Issaly",
+        "licence": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "style": "portfolio",
+      "title": "Illustrator studio",
+      "description": "Each project hangs on the studio wall; click one to step closer.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Studio_Andrea_Marescalchi.jpg/960px-Studio_Andrea_Marescalchi.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Studio_Andrea_Marescalchi.jpg/1920px-Studio_Andrea_Marescalchi.jpg",
+      "alt": "Whitewashed studio with large drawings of animals pinned to the walls",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Studio_Andrea_Marescalchi.jpg",
+        "name": "Andrea Marescalchi",
+        "licence": "CC BY-SA 4.0"
+      }
+    }
+  ]
+}

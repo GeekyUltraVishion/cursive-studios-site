@@ -1,0 +1,133 @@
+{
+  "styles": [
+    {
+      "id": "product",
+      "name": "Product"
+    },
+    {
+      "id": "property",
+      "name": "Property and Building"
+    },
+    {
+      "id": "social-reels",
+      "name": "Social Reels"
+    },
+    {
+      "id": "logo-animation",
+      "name": "Logo Animation"
+    },
+    {
+      "id": "explainer",
+      "name": "Explainer"
+    }
+  ],
+  "samples": [
+    {
+      "style": "product",
+      "title": "Perfume bottle",
+      "description": "A slow turn under a single soft light, for a launch post.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Perfume_glass_bottle.jpg/960px-Perfume_glass_bottle.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Perfume_glass_bottle.jpg/1920px-Perfume_glass_bottle.jpg",
+      "alt": "A ribbed glass perfume bottle with a black cap on a pale wood shelf",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Perfume_glass_bottle.jpg",
+        "name": "Santeri Viinamäki",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "product",
+      "title": "Headphones",
+      "description": "The product lifts off the stand and opens to show the cushions.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Panasonic%2C_IFA_2018%2C_Berlin_%28P1070144%29.jpg/960px-Panasonic%2C_IFA_2018%2C_Berlin_%28P1070144%29.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Panasonic%2C_IFA_2018%2C_Berlin_%28P1070144%29.jpg/1920px-Panasonic%2C_IFA_2018%2C_Berlin_%28P1070144%29.jpg",
+      "alt": "Black over-ear headphones hanging on a metal stand against a soft blurred room",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Panasonic,_IFA_2018,_Berlin_(P1070144).jpg",
+        "name": "Matti Blume",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "property",
+      "title": "Housing block at night",
+      "description": "A dusk fly-around of the building, lights coming on floor by floor.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Appartment_building_from_Banner_Street_2024-01-11.jpg/960px-Appartment_building_from_Banner_Street_2024-01-11.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Appartment_building_from_Banner_Street_2024-01-11.jpg/1920px-Appartment_building_from_Banner_Street_2024-01-11.jpg",
+      "alt": "A brick housing block at night with lit blue doors reflected in a puddle",
+      "focus": "50% 45%",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Appartment_building_from_Banner_Street_2024-01-11.jpg",
+        "name": "Tom Page",
+        "licence": "CC BY-SA 2.0"
+      }
+    },
+    {
+      "style": "property",
+      "title": "Hotel lounge",
+      "description": "A walk-through of the finished room, before the room is built.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/960px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg/1920px-Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg",
+      "alt": "Hotel lounge with teak daybed, cane armchair and tall green shuttered doors",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Lobby_lounge_of_Amantaka_Suite_Amantaka_luxury_Resort_%26_Hotel_Luang_Prabang_Laos.jpg",
+        "name": "Basile Morin",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "social-reels",
+      "title": "Espresso pour",
+      "description": "A ten-second loop cut for Reels, with the menu price left off.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Espresso_coffee_pouring_from_retro_espresso_machine.jpg/960px-Espresso_coffee_pouring_from_retro_espresso_machine.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Espresso_coffee_pouring_from_retro_espresso_machine.jpg/1920px-Espresso_coffee_pouring_from_retro_espresso_machine.jpg",
+      "alt": "Espresso streaming from a chrome machine into two glass cups",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Espresso_coffee_pouring_from_retro_espresso_machine.jpg",
+        "name": "Shixart1985",
+        "licence": "CC BY 2.0"
+      }
+    },
+    {
+      "style": "logo-animation",
+      "title": "Spiral reveal",
+      "description": "The mark draws itself along a spiral and settles in the centre.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg/960px-Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg/1920px-Spiral_stairs_%28Art_Deco%2C_Neboti%C4%8Dnik%2C_Ljubljana%29.jpg",
+      "alt": "Spiral staircase seen from below in black and white",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Spiral_stairs_(Art_Deco,_Neboti%C4%8Dnik,_Ljubljana).jpg",
+        "name": "Petar Milošević",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "explainer",
+      "title": "App walkthrough",
+      "description": "How the app works in three screens, voiced and captioned.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Young_businesswoman_holding_her_smartphone_in_the_home_office.jpg/960px-Young_businesswoman_holding_her_smartphone_in_the_home_office.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Young_businesswoman_holding_her_smartphone_in_the_home_office.jpg/1920px-Young_businesswoman_holding_her_smartphone_in_the_home_office.jpg",
+      "alt": "A hand holding a phone over an open notebook and laptop on a home desk",
+      "focus": "60% 45%",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Young_businesswoman_holding_her_smartphone_in_the_home_office.jpg",
+        "name": "Shixart1985",
+        "licence": "CC BY 2.0"
+      }
+    }
+  ]
+}

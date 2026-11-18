@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion Graphics: Cursive Studios</title>
+  <meta name="description" content="Product animations, property and building fly-throughs, social reels, logo animation and explainers.">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/service.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container site-header__bar">
+      <a class="wordmark" href="/">Cursive Studios</a>
+      <button class="btn nav__toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>Menu</button>
+      <nav aria-label="Main">
+        <ul class="nav__list" id="site-nav">
+          <li><a class="nav__link" href="/ai-ugc-ads">AI UGC Ads</a></li>
+          <li><a class="nav__link" href="/motion-graphics" aria-current="page">Motion Graphics</a></li>
+          <li><a class="nav__link" href="/website-design">Website Design</a></li>
+          <li><a class="nav__link" href="/3d-websites">3D Websites</a></li>
+          <li><a class="btn nav__cta" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="container page-hero" aria-labelledby="page-title">
+      <div class="hero__card settle">
+        <h1 id="page-title">Products and buildings, in motion.</h1>
+        <div class="hero__side">
+          <p class="lead">Products, buildings, reels, logos and explainers, animated.</p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#contact">Get in touch</a>
+            <a class="btn" href="#styles">See the styles</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container gets" aria-labelledby="gets-title">
+      <h2 id="gets-title">What you get</h2>
+      <ul class="gets__list">
+          <li>
+            <h3>A storyboard first</h3>
+            <p>You see the shots before any animation starts.</p>
+          </li>
+          <li>
+            <h3>Your chosen style</h3>
+            <p>Pick a look below, or send us one you like.</p>
+          </li>
+          <li>
+            <h3>Every size you need</h3>
+            <p>Versions for your site, your ads and social.</p>
+          </li>
+          <li>
+            <h3>Changes included</h3>
+            <p>Your notes go in before the final files.</p>
+          </li>
+      </ul>
+    </section>
+
+    <section class="container gallery" id="styles" aria-labelledby="styles-title" data-gallery data-source="content/motion-graphics.json">
+      <div class="section-head">
+        <h2 id="styles-title">Pick a style</h2>
+        <p>Open a sample, then ask for the one you like.</p>
+      </div>
+      <div class="tabs" role="group" aria-label="Filter by style" data-gallery-tabs></div>
+      <ul class="cards" data-gallery-grid aria-live="polite"></ul>
+      <p class="gallery__status" data-gallery-status></p>
+      <noscript><p class="gallery__status">The gallery needs JavaScript. See our latest work on <a class="link" href="https://www.instagram.com/yourhandle/">Instagram</a>.</p></noscript>
+    </section>
+
+    <section class="ask" id="contact" aria-labelledby="contact-title">
+      <div class="container ask__grid">
+        <h2 id="contact-title">Tell us which style caught your eye.</h2>
+        <div class="ask__ways">
+          <a class="btn btn--primary" href="https://ig.me/m/yourhandle" data-instagram-dm><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.25" cy="6.75" r="0.75" fill="currentColor" stroke="none"/></svg>Get in touch</a>
+          <p>Or email <a class="link" href="mailto:hello@example.com" data-email><span class="fill" data-email-text>hello@example.com</span></a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="viewer" aria-labelledby="viewer-title" data-viewer>
+    <div class="viewer__inner">
+      <div class="viewer__media" data-viewer-media></div>
+      <div class="viewer__text">
+        <button class="btn btn--small viewer__close" type="button" data-viewer-close>Close</button>
+        <p class="viewer__style" data-viewer-style></p>
+        <h2 id="viewer-title" data-viewer-title></h2>
+        <p data-viewer-desc></p>
+          <a class="btn btn--primary" href="https://ig.me/m/yourhandle" data-viewer-request><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.25" cy="6.75" r="0.75" fill="currentColor" stroke="none"/></svg>Request this style</a>
+      </div>
+    </div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__row">
+        <a class="wordmark" href="/">Cursive Studios</a>
+        <ul class="site-footer__links">
+          <li><a href="https://www.instagram.com/yourhandle/" data-instagram-link>Instagram</a></li>
+          <li><a href="/ai-ugc-ads">AI UGC Ads</a></li>
+          <li><a href="/motion-graphics">Motion Graphics</a></li>
+          <li><a href="/website-design">Website Design</a></li>
+          <li><a href="/3d-websites">3D Websites</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__small">
+        <p>Content created with AI tools.</p>
+        <p data-credits hidden></p>
+        <p>&copy; <span data-year>2026</span> Cursive Studios</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/gallery.js" defer></script>
+</body>
+</html>

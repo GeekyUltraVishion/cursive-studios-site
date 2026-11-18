@@ -1,0 +1,142 @@
+{
+  "styles": [
+    {
+      "id": "minimal",
+      "name": "Minimal"
+    },
+    {
+      "id": "bold",
+      "name": "Bold"
+    },
+    {
+      "id": "luxury",
+      "name": "Luxury"
+    },
+    {
+      "id": "playful",
+      "name": "Playful"
+    },
+    {
+      "id": "corporate",
+      "name": "Corporate"
+    },
+    {
+      "id": "cafe-restaurant",
+      "name": "Cafe and Restaurant"
+    }
+  ],
+  "samples": [
+    {
+      "style": "minimal",
+      "title": "Furniture maker",
+      "description": "Lots of space, one typeface, the pieces doing the talking.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Heiligengrabe%2C_Kloster_Stift_zum_Heiligengrabe%2C_Abtei%2C_Appartement_im_Dormitorium_--_2017_--_7261-7.jpg/960px-Heiligengrabe%2C_Kloster_Stift_zum_Heiligengrabe%2C_Abtei%2C_Appartement_im_Dormitorium_--_2017_--_7261-7.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Heiligengrabe%2C_Kloster_Stift_zum_Heiligengrabe%2C_Abtei%2C_Appartement_im_Dormitorium_--_2017_--_7261-7.jpg/1920px-Heiligengrabe%2C_Kloster_Stift_zum_Heiligengrabe%2C_Abtei%2C_Appartement_im_Dormitorium_--_2017_--_7261-7.jpg",
+      "alt": "Pale green bedroom with two plain birch beds on a wooden floor",
+      "url": "furniture-maker.example",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Heiligengrabe,_Kloster_Stift_zum_Heiligengrabe,_Abtei,_Appartement_im_Dormitorium_--_2017_--_7261-7.jpg",
+        "name": "Dietmar Rabich",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "bold",
+      "title": "Stationery brand",
+      "description": "One loud colour, big type and a product grid.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/A_green_stapler.jpg/960px-A_green_stapler.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/A_green_stapler.jpg/1920px-A_green_stapler.jpg",
+      "alt": "A lime green stapler on a pale grey desk with a soft shadow",
+      "url": "stationery-brand.example",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:A_green_stapler.jpg",
+        "name": "Jiafei Slay Queen",
+        "licence": "CC0"
+      }
+    },
+    {
+      "style": "luxury",
+      "title": "Boutique hotel",
+      "description": "Full-width rooms, a quiet serif and booking in the corner.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/1_Hotel_Miami_Beach_May_2015_%2841%29.jpg/960px-1_Hotel_Miami_Beach_May_2015_%2841%29.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/1_Hotel_Miami_Beach_May_2015_%2841%29.jpg/1920px-1_Hotel_Miami_Beach_May_2015_%2841%29.jpg",
+      "alt": "Hotel lobby with white sofas, a driftwood sculpture and a timber ceiling",
+      "url": "boutique-hotel.example",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:1_Hotel_Miami_Beach_May_2015_(41).jpg",
+        "name": "Clairecato321",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "playful",
+      "title": "Bakery",
+      "description": "Bright colours and the day's bakes up front.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Apple_cake_with_vanilla_ice_cream_2.jpg/960px-Apple_cake_with_vanilla_ice_cream_2.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Apple_cake_with_vanilla_ice_cream_2.jpg/1920px-Apple_cake_with_vanilla_ice_cream_2.jpg",
+      "alt": "Slice of apple cake with vanilla ice cream on a blue gingham cloth",
+      "url": "bakery.example",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Apple_cake_with_vanilla_ice_cream_2.jpg",
+        "name": "W.carter",
+        "licence": "CC0"
+      }
+    },
+    {
+      "style": "corporate",
+      "title": "Consultancy",
+      "description": "Clear services, team and contact, nothing extra.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Olympia_Simplex.jpg/960px-Olympia_Simplex.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Olympia_Simplex.jpg/1920px-Olympia_Simplex.jpg",
+      "alt": "A black portable typewriter on a pale grey seamless backdrop",
+      "url": "consultancy.example",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Olympia_Simplex.jpg",
+        "name": "Sammlung der Medien und Wissenschaft",
+        "licence": "CC BY 4.0"
+      }
+    },
+    {
+      "style": "cafe-restaurant",
+      "title": "Neighbourhood cafe",
+      "description": "Opening hours, the menu and the map on the first screen.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Barhocker_%28fcm%29.jpg/960px-Barhocker_%28fcm%29.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Barhocker_%28fcm%29.jpg/1920px-Barhocker_%28fcm%29.jpg",
+      "alt": "Row of bentwood bar stools along a counter on a tiled floor",
+      "url": "neighbourhood-cafe.example",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Barhocker_(fcm).jpg",
+        "name": "Photograph: Frank C. Müller, Baden-Baden",
+        "licence": "CC BY-SA 4.0"
+      }
+    },
+    {
+      "style": "cafe-restaurant",
+      "title": "Rooftop restaurant",
+      "description": "The view leads, with the menu and table booking beneath.",
+      "thumb": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Restaurant_N%C3%A4sinneula.jpg/960px-Restaurant_N%C3%A4sinneula.jpg",
+      "video": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Restaurant_N%C3%A4sinneula.jpg/1920px-Restaurant_N%C3%A4sinneula.jpg",
+      "alt": "Tower restaurant with laid tables and a sunset view over a city",
+      "url": "rooftop-restaurant.example",
+      "placeholder": true,
+      "credit": {
+        "url": "https://commons.wikimedia.org/wiki/File:Restaurant_N%C3%A4sinneula.jpg",
+        "name": "kallerna",
+        "licence": "CC BY-SA 4.0"
+      }
+    }
+  ]
+}

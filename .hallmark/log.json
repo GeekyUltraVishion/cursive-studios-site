@@ -1,5 +1,35 @@
 [
  {
+  "shape": "Service Sheet",
+  "theme": "midnight",
+  "axes": "dark/grotesk-sans/warm",
+  "hero": "Banner",
+  "nav": "edge-aligned",
+  "footer": "colophon",
+  "imagery": "photographs",
+  "photos": [
+   "library stand-ins, see content/*.json credits"
+  ],
+  "entry": "motion-graphics.html, website-design.html, 3d-websites.html, ai-ugc-ads.html",
+  "fingerprint": "banner/gets-grid/style-shelf/ask-band",
+  "sections": [
+   "hero",
+   "gets",
+   "gallery",
+   "ask",
+   "footer"
+  ],
+  "signature": "the style shelf: filter by look, ask for the one you like",
+  "waived": [
+   "39b",
+   "77",
+   "81"
+  ],
+  "prompt": "Cursive Studios service pages",
+  "date": "2026-11-18",
+  "mode": "build"
+ },
+ {
   "shape": "Studio Index",
   "theme": "midnight",
   "axes": "dark/grotesk-sans/warm",
