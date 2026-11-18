@@ -44,7 +44,7 @@ Static site, no build step or package.json. The homepage is built; service pages
 - `index.html`: the homepage. `js/main.js`: mobile menu, and fills contact links and featured work from `content/data.json` (the HTML holds the same content as a no-JS fallback, so keep the two in step).
 - `css/settings.css`: every colour and both fonts (the one file to restyle the site). `css/tokens.css`: spacing/type scale. `css/base.css`: Hallmark scaffold base. `css/main.css`: page styles, starting with the Hallmark stamp.
 - `content/`: `videos/`, `images/`, `data.json` (see `content/README.md`). Entries with `"placeholder": true` are Wikimedia stand-ins shown in duotone and credited in the footer.
-- Hallmark design: theme Midnight, build log in `.hallmark/log.json`.
+- Hallmark design: Midnight layout recoloured warm (espresso, ivory, copper accent), build log in `.hallmark/log.json`.
 
 Run locally (the JSON fetch needs http, not `file://`):
 

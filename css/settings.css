@@ -1,6 +1,6 @@
 /* Cursive Studios: site settings.
    Change the colours and fonts here and the whole site follows.
-   Colours use OKLCH: lightness %, chroma (0 = grey, 0.1+ = vivid), hue angle (264 = midnight blue, 230 = azure).
+   Colours use OKLCH: lightness %, chroma (0 = grey, 0.1+ = vivid), hue angle (50 = espresso brown, 55 = copper).
    Fonts: swap the Google Fonts URL and the two family names below together. */
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@400;500&family=Mona+Sans:wdth,wght@100..125,300..500&display=swap");
 
@@ -15,24 +15,24 @@
   --tracking-display: -0.015em;
 
   /* Backgrounds, darkest to lightest */
-  --color-paper: oklch(14% 0.048 264);
-  --color-paper-2: oklch(18.5% 0.052 264);
-  --color-paper-3: oklch(23% 0.055 264);
+  --color-paper: oklch(15% 0.012 50);
+  --color-paper-2: oklch(19.5% 0.014 50);
+  --color-paper-3: oklch(24% 0.016 50);
 
   /* Text */
-  --color-ink: oklch(95% 0.016 250);
-  --color-ink-2: oklch(88% 0.05 245);
-  --color-muted: oklch(73% 0.04 256);
+  --color-ink: oklch(94% 0.018 80);
+  --color-ink-2: oklch(86% 0.03 75);
+  --color-muted: oklch(72% 0.025 70);
 
   /* Lines */
-  --color-rule: oklch(29% 0.058 264);
-  --color-rule-2: oklch(40% 0.06 262);
+  --color-rule: oklch(30% 0.018 50);
+  --color-rule-2: oklch(41% 0.022 55);
 
   /* Accent: the main button, link hovers, focus rings. Keep it rare. */
-  --color-accent: oklch(80% 0.11 230);
-  --color-accent-2: oklch(58% 0.1 236);
-  --color-accent-ink: oklch(16% 0.05 264);
-  --color-focus: oklch(84% 0.12 228);
+  --color-accent: oklch(74% 0.13 55);
+  --color-accent-2: oklch(58% 0.12 50);
+  --color-accent-ink: oklch(17% 0.02 50);
+  --color-focus: oklch(80% 0.13 60);
 
   /* Status */
   --color-error: oklch(72% 0.15 27);
@@ -42,5 +42,5 @@
   --radius-card: 0;
   --radius-pill: 0;
   --rule-hair: 1px;
-  --shadow-card: 0 24px 48px -24px oklch(6% 0.04 264 / 0.7);
+  --shadow-card: 0 24px 48px -24px oklch(6% 0.01 50 / 0.7);
 }
