@@ -4,11 +4,6 @@
     "email": "hello@example.com",
     "instagram": "yourhandle"
   },
-  "hero": {
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Hallway_to_Nowhere_%283098664168%29.jpg/1280px-Hallway_to_Nowhere_%283098664168%29.jpg",
-    "alt": "An empty tiled corridor lit by a row of ceiling strip lights",
-    "credit": { "name": "Steve Harris", "url": "https://commons.wikimedia.org/wiki/File:Hallway_to_Nowhere_(3098664168).jpg", "licence": "CC BY-SA 2.0" }
-  },
   "work": [
     {
       "title": "Skincare brand",
@@ -18,7 +13,11 @@
       "video": "",
       "alt": "A hand squeezing a glass dropper over a small amber bottle",
       "focus": "45% 50%",
-      "credit": { "name": "elsaolofsson", "url": "https://commons.wikimedia.org/wiki/File:Woman_taking_a_dropper_of_CBD_oil.jpg", "licence": "CC BY 2.0" }
+      "credit": {
+        "name": "elsaolofsson",
+        "url": "https://commons.wikimedia.org/wiki/File:Woman_taking_a_dropper_of_CBD_oil.jpg",
+        "licence": "CC BY 2.0"
+      }
     },
     {
       "title": "Residential building",
@@ -28,7 +27,11 @@
       "video": "",
       "alt": "A lit concrete stairwell glowing inside a dark building at night",
       "focus": "55% 50%",
-      "credit": { "name": "Sarah Clark", "url": "https://commons.wikimedia.org/wiki/File:Crest_kitchenette_motel_stairwell.jpg", "licence": "CC BY-SA 4.0" }
+      "credit": {
+        "name": "Sarah Clark",
+        "url": "https://commons.wikimedia.org/wiki/File:Crest_kitchenette_motel_stairwell.jpg",
+        "licence": "CC BY-SA 4.0"
+      }
     },
     {
       "title": "Pet brand",
@@ -38,7 +41,11 @@
       "video": "",
       "alt": "A ginger dog swimming in dark water, looking at the camera",
       "focus": "60% 45%",
-      "credit": { "name": "Basile Morin", "url": "https://commons.wikimedia.org/wiki/File:Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg", "licence": "CC BY-SA 4.0" }
+      "credit": {
+        "name": "Basile Morin",
+        "url": "https://commons.wikimedia.org/wiki/File:Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
+        "licence": "CC BY-SA 4.0"
+      }
     },
     {
       "title": "Cocktail bar",
@@ -48,7 +55,11 @@
       "video": "",
       "alt": "A dim cocktail bar with lit bottle shelves up to the ceiling",
       "focus": "30% 50%",
-      "credit": { "name": "Chelsea Marie Hicks", "url": "https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg", "licence": "CC BY 2.0" }
+      "credit": {
+        "name": "Chelsea Marie Hicks",
+        "url": "https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg",
+        "licence": "CC BY 2.0"
+      }
     }
   ]
 }

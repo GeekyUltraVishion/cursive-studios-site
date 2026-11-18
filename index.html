@@ -41,12 +41,14 @@
           </div>
         </div>
       </div>
-      <!-- 3D stage: Prompt 4 mounts the Three.js canvas inside #hero-3d. Until then it shows a still. -->
-      <figure class="hero__frame" id="hero-3d" data-slot="hero" data-alt="An empty tiled corridor lit by a row of ceiling strip lights">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Hallway_to_Nowhere_%283098664168%29.jpg/1920px-Hallway_to_Nowhere_%283098664168%29.jpg"
-             srcset="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Hallway_to_Nowhere_%283098664168%29.jpg/960px-Hallway_to_Nowhere_%283098664168%29.jpg 960w, https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Hallway_to_Nowhere_%283098664168%29.jpg/1280px-Hallway_to_Nowhere_%283098664168%29.jpg 1280w, https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Hallway_to_Nowhere_%283098664168%29.jpg/1920px-Hallway_to_Nowhere_%283098664168%29.jpg 1920w"
-             sizes="100vw" width="2560" height="1920" style="object-position: 50% 55%"
-             alt="An empty tiled corridor lit by a row of ceiling strip lights" fetchpriority="high">
+      <!-- 3D hero: js/three/ribbon.js draws the copper ribbon into this frame once the page is idle.
+           The still below shows first, and stays for reduced motion, data saver or no WebGL. -->
+      <figure class="hero__frame" id="hero-3d">
+        <picture>
+          <source srcset="content/images/hero-ribbon-1600.webp 1600w, content/images/hero-ribbon-960.webp 960w" sizes="100vw" type="image/webp">
+          <img class="hero__still" src="content/images/hero-ribbon-1600.jpg" width="1600" height="670" alt="A copper line looping through dark space like handwriting" fetchpriority="high">
+        </picture>
+        <button class="btn btn--small hero__motion" type="button" aria-pressed="false" data-motion-toggle hidden>Pause</button>
       </figure>
     </section>
 
@@ -56,22 +58,22 @@
         <p>One of these, or a few together for a launch.</p>
       </div>
       <ul class="index">
-        <li class="index__row">
+        <li class="index__row" data-reveal>
           <h3 class="index__name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="6.5" y="2.5" width="11" height="19" rx="1.5"/><path d="M10.5 9.5v5l4-2.5z"/></svg>AI UGC Ads</h3>
           <p>Vertical ads in the voice of a real customer, made for Reels, TikTok and Shorts.</p>
           <a class="link index__link" href="/ai-ugc-ads">About UGC ads</a>
         </li>
-        <li class="index__row">
+        <li class="index__row" data-reveal>
           <h3 class="index__name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="14" cy="12" r="6.5"/><path d="M2.5 9h4M3.5 12h3M2.5 15h4"/></svg>Motion Graphics</h3>
           <p>Your product turning in the light, or a building before it is built.</p>
           <a class="link index__link" href="/motion-graphics">About motion</a>
         </li>
-        <li class="index__row">
+        <li class="index__row" data-reveal>
           <h3 class="index__name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15"/><path d="M2.5 9.5h19M9.5 9.5v10"/></svg>Website Design</h3>
           <p>A clear, quick site that says what you do and how to reach you.</p>
           <a class="link index__link" href="/website-design">About websites</a>
         </li>
-        <li class="index__row">
+        <li class="index__row" data-reveal>
           <h3 class="index__name"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2.5l8.5 4.75v9.5L12 21.5l-8.5-4.75v-9.5z"/><path d="M3.5 7.25L12 12l8.5-4.75M12 12v9.5"/></svg>3D Websites</h3>
           <p>A site with an object people can pick up, turn and look inside.</p>
           <a class="link index__link" href="/3d-websites">About 3D sites</a>
@@ -85,22 +87,22 @@
         <a class="link" href="https://www.instagram.com/yourhandle/" data-instagram-link>The full reel is on Instagram</a>
       </div>
       <ul class="work" data-work>
-        <li class="work__item">
+        <li class="work__item" data-reveal>
           <figure class="work__media" data-slot="work-1"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Woman_taking_a_dropper_of_CBD_oil.jpg/960px-Woman_taking_a_dropper_of_CBD_oil.jpg" width="960" height="640" loading="lazy" alt="A hand squeezing a glass dropper over a small amber bottle" style="object-position: 45% 50%"></figure>
           <h3 class="work__title">Skincare brand</h3>
           <p class="work__meta">AI UGC ad</p>
         </li>
-        <li class="work__item">
+        <li class="work__item" data-reveal>
           <figure class="work__media" data-slot="work-2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/960px-Crest_kitchenette_motel_stairwell.jpg" width="960" height="1377" loading="lazy" alt="A lit concrete stairwell glowing inside a dark building at night" style="object-position: 55% 50%"></figure>
           <h3 class="work__title">Residential building</h3>
           <p class="work__meta">Property motion graphics</p>
         </li>
-        <li class="work__item">
+        <li class="work__item" data-reveal>
           <figure class="work__media" data-slot="work-3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg/960px-Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg" width="960" height="720" loading="lazy" alt="A ginger dog swimming in dark water, looking at the camera" style="object-position: 60% 45%"></figure>
           <h3 class="work__title">Pet brand</h3>
           <p class="work__meta">AI UGC ad</p>
         </li>
-        <li class="work__item">
+        <li class="work__item" data-reveal>
           <figure class="work__media" data-slot="work-4"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/960px-Cure_cocktail_bar_New_Orleans_2011.jpg" width="960" height="640" loading="lazy" alt="A dim cocktail bar with lit bottle shelves up to the ceiling" style="object-position: 30% 50%"></figure>
           <h3 class="work__title">Cocktail bar</h3>
           <p class="work__meta">Website design</p>
@@ -151,13 +153,19 @@
       </div>
       <div class="site-footer__small">
         <p>Content created with AI tools.</p>
-        <p data-credits>Photographs: <a href="https://commons.wikimedia.org/wiki/File:Hallway_to_Nowhere_(3098664168).jpg">Steve Harris</a> (CC BY-SA 2.0), <a href="https://commons.wikimedia.org/wiki/File:Woman_taking_a_dropper_of_CBD_oil.jpg">elsaolofsson</a> (CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Crest_kitchenette_motel_stairwell.jpg">Sarah Clark</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg">Basile Morin</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg">Chelsea Marie Hicks</a> (CC BY 2.0), via Wikimedia Commons.</p>
+        <p data-credits>Photographs: <a href="https://commons.wikimedia.org/wiki/File:Woman_taking_a_dropper_of_CBD_oil.jpg">elsaolofsson</a> (CC BY 2.0), <a href="https://commons.wikimedia.org/wiki/File:Crest_kitchenette_motel_stairwell.jpg">Sarah Clark</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg">Basile Morin</a> (CC BY-SA 4.0), <a href="https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg">Chelsea Marie Hicks</a> (CC BY 2.0), via Wikimedia Commons.</p>
         <p>&copy; <span data-year>2026</span> Cursive Studios</p>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js" defer></script>
+  <script type="module">
+    import { reducedMotion, tier, whenIdle } from './js/three/support.js';
+    const el = document.getElementById('hero-3d');
+    const level = tier();
+    if (el && level !== 'none' && !reducedMotion()) whenIdle(() => import('./js/three/ribbon.js').then((m) => m.mount(el, { tier: level })).catch(() => {}));
+  </script>
   <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
 document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
 </body>

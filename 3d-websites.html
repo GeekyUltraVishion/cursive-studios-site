@@ -46,23 +46,40 @@
     <section class="container gets" aria-labelledby="gets-title">
       <h2 id="gets-title">What you get</h2>
       <ul class="gets__list">
-          <li>
+          <li data-reveal>
             <h3>A 3D model</h3>
             <p>Your product or space, modelled for the web.</p>
           </li>
-          <li>
+          <li data-reveal>
             <h3>A site built around it</h3>
             <p>A full website in the style you pick below.</p>
           </li>
-          <li>
+          <li data-reveal>
             <h3>A light version</h3>
             <p>A simpler fallback for older phones.</p>
           </li>
-          <li>
+          <li data-reveal>
             <h3>A video of it</h3>
             <p>A recording of the 3D for ads and social.</p>
           </li>
       </ul>
+    </section>
+
+    <section class="container demo" aria-labelledby="demo-title">
+      <div class="demo__text">
+        <h2 id="demo-title">Turn it yourself</h2>
+        <p class="lead">Drag the bottle to spin it. A 3D site is built around an object like this, modelled from your product.</p>
+      </div>
+      <!-- Live 3D: js/three/product.js draws into this frame when it scrolls near. The still shows until then,
+           and stays for data saver or no WebGL. -->
+      <figure class="demo__stage" id="product-3d">
+        <picture>
+          <source srcset="content/images/demo-bottle-1200.webp 1200w, content/images/demo-bottle-720.webp 720w" sizes="(min-width: 60rem) 55vw, 100vw" type="image/webp">
+          <img class="demo__still" src="content/images/demo-bottle-1200.jpg" width="1200" height="900" alt="A copper serum bottle with a label that reads Your product in 3D" loading="lazy">
+        </picture>
+        <p class="demo__hint" data-demo-hint hidden>Drag to turn</p>
+        <button class="btn btn--small demo__motion" type="button" aria-pressed="false" data-motion-toggle hidden>Pause</button>
+      </figure>
     </section>
 
     <section class="container gallery" id="styles" aria-labelledby="styles-title" data-gallery data-source="content/3d-websites.json">
@@ -122,5 +139,11 @@
 
   <script src="js/main.js" defer></script>
   <script src="js/gallery.js" defer></script>
+  <script type="module">
+    import { tier, whenNear } from './js/three/support.js';
+    const el = document.getElementById('product-3d');
+    const level = tier();
+    if (el && level !== 'none') whenNear(el, () => import('./js/three/product.js').then((m) => m.mount(el, { tier: level })).catch(() => {}));
+  </script>
 </body>
 </html>

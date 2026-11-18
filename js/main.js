@@ -27,6 +27,23 @@
   document.addEventListener('contextmenu', (e) => { if (guarded(e.target)) e.preventDefault(); });
   document.addEventListener('dragstart', (e) => { if (guarded(e.target)) e.preventDefault(); });
 
+  // Scroll reveal: elements with data-reveal fade and rise in once as they enter the screen.
+  // Also picks up cards the galleries add later. Skipped entirely under "reduce motion" (CSS shows them as-is).
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+    }), { rootMargin: '0px 0px -8% 0px' });
+    const watch = (root) => root.querySelectorAll?.('[data-reveal]:not(.is-in)').forEach((el) => {
+      const sibs = [...el.parentElement.children].filter((c) => c.hasAttribute('data-reveal'));
+      el.style.setProperty('--i', String(Math.max(0, sibs.indexOf(el)) % 4));
+      io.observe(el);
+    });
+    watch(document);
+    new MutationObserver((ms) => ms.forEach((m) => m.addedNodes.forEach((n) => { if (n.nodeType === 1) { if (n.matches('[data-reveal]')) watch(n.parentElement); else watch(n); } }))).observe(document.body, { childList: true, subtree: true });
+  } else {
+    document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
+  }
+
   // 3. Footer year
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
@@ -61,7 +78,7 @@
     } else {
       media = `<figure class="work__media"><img class="real" src="${esc(w.poster)}" loading="lazy" alt="${esc(w.alt)}"${pos}></figure>`;
     }
-    return `<li class="work__item">${media}<h3 class="work__title">${esc(w.title)}</h3><p class="work__meta">${esc(w.service)}</p></li>`;
+    return `<li class="work__item" data-reveal>${media}<h3 class="work__title">${esc(w.title)}</h3><p class="work__meta">${esc(w.service)}</p></li>`;
   };
 
   const applyWork = (data) => {
@@ -70,7 +87,7 @@
     list.innerHTML = data.work.slice(0, 4).map(workItem).join('');
     list.querySelectorAll('[data-slot] img').forEach((img) => img.addEventListener('error', () => img.remove(), { once: true }));
 
-    const credits = [data.hero?.credit, ...data.work.slice(0, 4).filter((w) => w.placeholder).map((w) => w.credit)].filter(Boolean);
+    const credits = [...data.work.slice(0, 4).filter((w) => w.placeholder).map((w) => w.credit)].filter(Boolean);
     const line = document.querySelector('[data-credits]');
     if (line) {
       line.hidden = credits.length === 0;

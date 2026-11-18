@@ -38,7 +38,7 @@
   };
 
   const card = (s, i) => `
-    <li class="card" data-style="${esc(s.style)}">
+    <li class="card" data-reveal data-style="${esc(s.style)}">
       <button class="card__open" type="button" aria-haspopup="dialog" data-index="${i}">
         ${mediaThumb(s)}
         <span class="card__title">${esc(s.title)}</span>

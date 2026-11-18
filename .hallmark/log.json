@@ -1,5 +1,32 @@
 [
  {
+  "shape": "Studio Index",
+  "theme": "midnight",
+  "axes": "dark/grotesk-sans/warm",
+  "hero": "Banner over letterbox, live 3D ribbon",
+  "nav": "edge-aligned",
+  "footer": "colophon",
+  "imagery": "live 3D (Three.js) with still fallback",
+  "photos": [],
+  "entry": "index.html, 3d-websites.html",
+  "fingerprint": "letterbox-3d/index/contact-sheet/footnoted-statement/end-credits",
+  "sections": [
+   "hero",
+   "services-index",
+   "work",
+   "process-statement",
+   "credits",
+   "footer"
+  ],
+  "signature": "a copper ribbon writing an endless cursive loop",
+  "waived": [
+   "81"
+  ],
+  "prompt": "Cursive Studios 3D hero, scroll reveals, 3D demo",
+  "date": "2026-11-18",
+  "mode": "build"
+ },
+ {
   "shape": "Reel Wall",
   "theme": "midnight",
   "axes": "dark/grotesk-sans/warm",

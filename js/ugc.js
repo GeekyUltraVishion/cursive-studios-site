@@ -32,7 +32,7 @@
 
   // ---- cards
   const cardHtml = (v, i, { cta = true } = {}) => `
-    <li class="ad" data-i="${i}" data-category="${esc(v.category)}">
+    <li class="ad" data-reveal data-i="${i}" data-category="${esc(v.category)}">
       <div class="ad__frame">
         ${v.thumb ? `<img src="${esc(thumbUrl(v))}" alt="" loading="lazy">` : ''}
         <button class="ad__open" type="button" aria-haspopup="dialog" aria-label="Play ${esc(v.title)} with sound"></button>

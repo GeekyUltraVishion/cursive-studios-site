@@ -1,9 +1,11 @@
 /* Hallmark · shape: Studio Index (the user's section order) · genre: atmospheric · theme: Midnight recoloured warm by request: espresso ground, ivory ink, one copper signal (deal 1/3, seed cursive-studios-portfolio-ugc-b0be·866efbe2·2026-11-18·r0) · job: hire · draw: 12e67a (shape and nav swapped for the brief's order and five destinations)
- * hero: Banner over a letterboxed stage (title card above a 2.39:1 frame the 3D scene fills) · nav: edge-aligned, wordmark and five links, menu under 60rem · footer: colophon · imagery: photographs (library stand-ins in duotone, slots for the studio's own work) · signature: the page cut like a film, a letterboxed opening and an end-credits close
+ * hero: Banner over a letterboxed stage (title card above a 2.39:1 frame holding the live copper ribbon, js/three/ribbon.js, with a still fallback) · nav: edge-aligned, wordmark and five links, menu under 60rem · footer: colophon · imagery: photographs (library stand-ins in duotone, slots for the studio's own work) · signature: the page cut like a film, a letterboxed opening and an end-credits close
  * axes: dark/grotesk-sans/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* answered: motion, a scroll fade-and-rise on service rows and gallery items and the live hero ribbon, both by request; the theme's own motion is one settle */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V4 · weakest: S, the work row still holds stand-ins; the services are an index not icon cards, the process is one sentence with footnotes, and the contact is an end-credits roll */
 /* answered: fonts, two families by request (Mona Sans display, Geist body) where the theme uses one
- * answered: 81, the render sandbox blocks upload.wikimedia.org; every slot holds a library photo that loads in a normal browser */
+ */
+/* Hallmark · waive 81 · the four work frames hold library photos the render sandbox cannot fetch from the photo host · they load in a normal browser and the studio's own work replaces them */
 @import url("./settings.css");
 @import url("./tokens.css");
 @import url("./base.css");
@@ -59,6 +61,12 @@ h3 { font-weight: 500; font-stretch: 100%; letter-spacing: 0; }
 .hero__side .lead { color: var(--color-ink-2); }
 .actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 .hero__frame { position: relative; min-height: 320px; height: 100%; max-height: calc((var(--container) - 2 * var(--gutter)) / 2.39); margin: 0; border-radius: var(--radius-card); }
+.hero__frame { overflow: hidden; background: var(--color-paper-2); }
+.hero__frame picture, .hero__still { display: block; width: 100%; height: 100%; }
+.hero__still { object-fit: cover; }
+.hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; transition: opacity var(--dur-long) var(--ease-out); }
+.hero__frame.is-live .hero__canvas { opacity: 1; }
+.hero__motion { position: absolute; right: var(--space-sm); bottom: var(--space-sm); z-index: var(--z-raised); background: var(--color-paper); }
 .settle { animation: settle var(--dur-long) var(--ease-out) both; }
 @keyframes settle { from { opacity: 0.6; } }
 
@@ -114,7 +122,14 @@ video { -webkit-touch-callout: none; -webkit-user-select: none; user-select: non
 .site-footer__small { display: grid; gap: var(--space-2xs); margin-top: var(--space-lg); font-size: var(--text-sm); color: var(--color-muted); }
 .site-footer__small a { color: var(--color-muted); }
 
-@media (prefers-reduced-motion: reduce) { .settle { animation: none; } .btn, .link, .index__row { transition: none; } }
+/* Scroll reveal: a short fade and rise, once, only with scripting on */
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .js [data-reveal] { opacity: 0; transform: translateY(16px); transition: opacity 600ms var(--ease-out), transform 600ms var(--ease-out); transition-delay: calc(var(--i, 0) * 70ms); }
+  .js [data-reveal].is-in { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) { .settle { animation: none; } .hero__canvas { transition: none; } .btn, .link, .index__row { transition: none; } }
 
 @media (max-width: 60rem) {
   .hero { min-height: 0; }
