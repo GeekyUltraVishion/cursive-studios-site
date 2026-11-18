@@ -3,7 +3,6 @@
  * axes: dark/grotesk-sans/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
 /* Hallmark · pre-emit critique: P4 H4 E4 S4 R4 V3 · weakest: V, the page keeps the service template so the site reads as one; the hero trades its title card for the three newest ads */
 /* Hallmark · waive 28b · the player's poster is set from the ad's thumbnail each time it opens · the empty dialog never shows a bare video */
-@import url("./service.css");
 
 /* Hero: text beside the three newest */
 .ugc-hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-3xl); align-items: center; min-height: calc(100svh - var(--nav-h)); padding-block: var(--space-2xl); }
@@ -71,3 +70,6 @@
   .latest__row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .ad .btn--small { width: 100%; justify-content: center; }
 }
+@media (max-width: 26rem) { .ads { grid-template-columns: minmax(0, 1fr); } }
+/* reserve the strip's space before the data arrives (no layout shift) */
+.latest__row:empty { aspect-ratio: 27 / 16; max-height: 62svh; background: var(--color-paper-2); }

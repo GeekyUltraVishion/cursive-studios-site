@@ -115,7 +115,8 @@ export function mount(el, { tier = 'full' } = {}) {
   canvas.addEventListener('pointerup', end); canvas.addEventListener('pointercancel', end);
 
   el.tabIndex = 0;
-  el.setAttribute('role', 'img');
+  el.setAttribute('role', 'group');
+  el.setAttribute('aria-roledescription', '3D viewer');
   el.setAttribute('aria-label', '3D serum bottle. Drag, or use the left and right arrow keys, to turn it.');
   el.addEventListener('keydown', (e) => {
     if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;

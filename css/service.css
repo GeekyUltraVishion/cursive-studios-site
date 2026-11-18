@@ -7,7 +7,6 @@
 /* Hallmark · waive 83 · every gallery picture is a portfolio sample or ad, the studio's own work once the stand-ins are replaced · the gallery is the page's reason to exist */
 /* Hallmark · waive 77 · each style card holds a sample picture 640 by 400 · the render sandbox could not load the stand-in sample photos, so the gallery measured empty */
 /* Hallmark · answered V3 · the four service pages repeat one layout on purpose so the site reads as one; fonts are two families by request */
-@import url("./main.css");
 
 .page-hero { padding-block: var(--space-3xl) var(--space-2xl); }
 .page-hero .hero__card h1 { max-width: 14ch; }

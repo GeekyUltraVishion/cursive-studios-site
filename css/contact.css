@@ -1,0 +1,44 @@
+/* Hallmark · contact page: shares the service pages' system (settings.css, tokens.css, base.css, main.css, service.css) · job: hire, the enquiry · form: six fields, one primary action, posts to Netlify Forms or Formspree, never a fake send */
+
+.honeypot { display: none; }
+.contact-email { color: var(--color-ink-2); }
+
+.enquiry { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: var(--space-xl) var(--space-3xl); padding-top: var(--space-2xl); padding-bottom: var(--section-gap-s); }
+.enquiry__intro { display: grid; align-content: start; gap: var(--space-md); }
+.enquiry__intro p { color: var(--color-ink-2); }
+.enquiry__form { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-lg) var(--gap-columns); padding: var(--space-xl); background: var(--color-paper-2); }
+
+.field { display: grid; gap: var(--space-xs); align-content: start; }
+.field--wide { grid-column: 1 / -1; }
+.field label { font-size: var(--text-sm); font-weight: 500; color: var(--color-ink); }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 52px; padding: 0 var(--space-md);
+  border: var(--rule-hair) solid var(--color-muted); border-radius: var(--radius-pill);
+  background: var(--color-paper); color: var(--color-ink); font: 400 var(--text-md)/1.4 var(--font-body);
+  outline: 2px solid transparent; outline-offset: 2px;
+  transition: background-color var(--dur-short) var(--ease-out);
+}
+.field textarea { min-height: 160px; padding: var(--space-sm) var(--space-md); resize: vertical; }
+.field select { cursor: pointer; }
+.field input:hover, .field select:hover, .field textarea:hover { background: var(--color-paper-3); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline-color: var(--color-focus); }
+.field [aria-invalid="true"] { border-color: var(--color-error); }
+.field input:disabled, .field select:disabled, .field textarea:disabled { opacity: 0.55; cursor: not-allowed; }
+.field__help { font-size: var(--text-sm); color: var(--color-muted); }
+.field__error { font-size: var(--text-sm); color: var(--color-error); }
+.enquiry__send { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-md) var(--space-lg); }
+.field__status { color: var(--color-ink-2); max-width: 52ch; }
+.field__status.is-error { color: var(--color-error); }
+.field__status.is-done { color: var(--color-success); }
+.btn[aria-busy="true"] { opacity: 0.7; }
+
+.page-hero--short { padding-bottom: var(--section-gap); }
+
+@media (prefers-reduced-motion: reduce) { .field input, .field select, .field textarea { transition: none; } }
+@media (max-width: 60rem) {
+  .enquiry { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 40rem) {
+  .enquiry__form { grid-template-columns: minmax(0, 1fr); padding: var(--space-lg); margin-inline: calc(-1 * var(--space-xs)); }
+  .enquiry__send .btn { width: 100%; justify-content: center; }
+}

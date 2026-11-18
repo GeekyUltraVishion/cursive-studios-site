@@ -6,9 +6,6 @@
 /* answered: fonts, two families by request (Mona Sans display, Geist body) where the theme uses one
  */
 /* Hallmark · waive 81 · the four work frames hold library photos the render sandbox cannot fetch from the photo host · they load in a normal browser and the studio's own work replaces them */
-@import url("./settings.css");
-@import url("./tokens.css");
-@import url("./base.css");
 
 body { font-family: var(--font-body); }
 h1, h2 { font-weight: var(--display-weight); font-stretch: var(--display-stretch); line-height: 1.04; }
@@ -114,6 +111,15 @@ h3 { font-weight: 500; font-stretch: 100%; letter-spacing: 0; }
 .roll dd { margin: 0; text-align: left; overflow-wrap: anywhere; }
 .credits .btn { margin-inline: auto; }
 .fill { padding: 0 0.25em; border: 1px dashed color-mix(in oklch, var(--color-muted) 70%, transparent); border-radius: 3px; color: var(--color-muted); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+
+/* Floating "DM us on Instagram" on phones and tablets; hidden on desktop and while the page's own contact block is on screen */
+.dm-float { display: none; }
+@media (max-width: 60rem) {
+  .dm-float { position: fixed; right: var(--space-md); bottom: calc(var(--space-md) + env(safe-area-inset-bottom, 0px)); z-index: var(--z-sticky); display: inline-flex; box-shadow: var(--shadow-card); transition: opacity var(--dur-short) var(--ease-out), transform var(--dur-short) var(--ease-out); }
+  .dm-float.is-away { opacity: 0; transform: translateY(12px); pointer-events: none; }
+  body { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) { .dm-float { transition: none; } }
 
 /* Videos: no long-press save menu on phones */
 video { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }

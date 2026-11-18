@@ -4,6 +4,10 @@
     "email": "hello@example.com",
     "instagram": "yourhandle"
   },
+  "form": {
+    "provider": "netlify",
+    "formspreeId": ""
+  },
   "work": [
     {
       "title": "Skincare brand",

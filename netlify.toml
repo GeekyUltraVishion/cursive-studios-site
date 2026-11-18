@@ -1,6 +1,6 @@
 # Publishes only the site files (not the .claude tooling) from dist/.
 [build]
-  command = "rsync -a --exclude '.*' --exclude 'CLAUDE.md' --exclude 'netlify.toml' --exclude 'vercel.json' --exclude 'dist' --exclude 'tools' ./ dist/"
+  command = "node tools/build-dist.mjs"
   publish = "dist"
 
 # Keep the raw video files out of search results and ask browsers to play, not save, them.
@@ -15,3 +15,19 @@
   [headers.values]
     X-Robots-Tag = "noindex, nofollow, noarchive"
     Content-Disposition = "inline"
+
+# Browser caching: fonts never change; images and the Three.js library change rarely.
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/content/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/js/vendor/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"

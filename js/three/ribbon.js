@@ -98,8 +98,10 @@ export function mount(el, { tier = 'full' } = {}) {
 
   // Run only while visible, not paused, and motion is allowed
   let visible = true, paused = false, raf = 0, last = performance.now(), t = 0;
+  let skip = false;
   const frame = (now) => {
     raf = 0;
+    if (lite && (skip = !skip)) { loop(); return; } // phones: draw every other frame (about 30 fps)
     const dt = Math.min((now - last) / 1000, 0.05); last = now; t += dt;
     uniforms.uHead.value = (uniforms.uHead.value + dt * 0.055) % 1;
     group.rotation.y += (target.x - 0.12 + Math.sin(t * 0.12) * 0.12 - group.rotation.y) * 0.04;
@@ -107,7 +109,8 @@ export function mount(el, { tier = 'full' } = {}) {
     renderer.render(scene, camera);
     loop();
   };
-  const loop = () => { if (!raf && visible && !paused && !document.hidden && !reducedMotion()) { last = performance.now(); raf = requestAnimationFrame(frame); } };
+  const loop = () => { if (!raf && visible && !paused && !document.hidden && !reducedMotion()) raf = requestAnimationFrame(frame); };
+  last = performance.now();
   const stop = () => { if (raf) cancelAnimationFrame(raf); raf = 0; };
   new IntersectionObserver(([e]) => { visible = e.isIntersecting; visible ? loop() : stop(); }).observe(el);
   document.addEventListener('visibilitychange', () => (document.hidden ? stop() : loop()));
