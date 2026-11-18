@@ -41,6 +41,22 @@ Options: `--date 2026-11-18` (defaults to today), `--caption "..."`, `--at 2.5` 
 - `file` and `thumb` can also be full `https://` links to a video host (see below).
 - Entries marked `"placeholder": true` are the sample clips. Delete them and their files as your real ads go in.
 
+## Your watermarked videos
+
+Upload the same polished, watermarked file you post on Instagram. The site never adds a watermark of its own and never crops the frame edges off, so your logo shows exactly where you placed it. With `--compress` the script re-encodes the video but keeps every pixel of the picture, watermark included.
+
+## Download protection: what it does and does not stop
+
+On every video on the site (UGC ads, and Motion Graphics, Website Design and 3D samples):
+
+- The player has no download button (`controlslist="nodownload"`), and picture-in-picture is off.
+- Right-click "Save video as", dragging the video out, and the long-press save menu on phones are blocked.
+- The video files are served with headers that keep them out of search results (`X-Robots-Tag: noindex`) and ask browsers to play rather than save them (`vercel.json`, `netlify.toml`).
+
+This stops casual saving, which is what most visitors would try. It cannot stop a determined person: anything a browser can play, it has downloaded, and someone can find the file in the browser's developer tools or simply screen-record it. No website can fully prevent that. Your watermark is the real protection: a copied ad still carries your name.
+
+If you need more than this later, move the videos to a host that streams them in small encrypted pieces instead of one file. Bunny Stream and Cloudflare Stream offer signed, expiring links and domain locks (the video only plays on your site), and some hosts offer DRM, which also blocks most screen recording. Put the host's links in `videos.json` as described above.
+
 ## File sizes and hosting
 
 | Limit | What it means for you |

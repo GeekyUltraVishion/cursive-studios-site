@@ -30,7 +30,7 @@
     const pos = s.focus ? ` style="object-position: ${esc(s.focus)}"` : '';
     const slot = s.placeholder ? ' data-slot' : '';
     const inner = s.video
-      ? `<video muted loop playsinline preload="none"${s.thumb ? ` poster="${esc(s.thumb)}"` : ''} aria-hidden="true"><source src="${esc(s.video)}" type="video/mp4"></video>`
+      ? `<video muted loop playsinline preload="none" controlslist="nodownload" disablepictureinpicture${s.thumb ? ` poster="${esc(s.thumb)}"` : ''} aria-hidden="true"><source src="${esc(s.video)}" type="video/mp4"></video>`
       : `<img src="${esc(s.thumb)}" alt="${esc(s.alt)}" loading="lazy"${pos}>`;
     const shot = `<span class="card__shot"${slot}>${inner}</span>`;
     if (!frame) return `<span class="card__media">${shot}</span>`;
@@ -91,7 +91,7 @@
     const full = s.image || s.thumb;
     vMedia.className = 'viewer__media' + (s.placeholder && !s.video ? ' is-standin' : '');
     vMedia.innerHTML = s.video
-      ? `<video controls playsinline ${reduce.matches ? '' : 'autoplay muted'} ${s.thumb ? `poster="${esc(s.thumb)}"` : ''}><source src="${esc(s.video)}" type="video/mp4"></video>`
+      ? `<video controls controlslist="nodownload" disablepictureinpicture playsinline ${reduce.matches ? '' : 'autoplay muted'} ${s.thumb ? `poster="${esc(s.thumb)}"` : ''}><source src="${esc(s.video)}" type="video/mp4"></video>`
       : `<img src="${esc(full)}" alt="${esc(s.alt)}">`;
     if (frame && !s.video) vMedia.insertAdjacentHTML('afterbegin', `<span class="browser__bar">${esc(s.url || 'yoursite.com')}</span>`);
     viewer.showModal();

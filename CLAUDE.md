@@ -29,7 +29,8 @@ email only.
 - Our content is AI-generated and the Instagram page already says so. Add one
 short line in the footer: "Content created with AI tools." Do not repeat AI
 disclaimers elsewhere.
-- Do not place any logo watermark over the videos.
+- Do not place any logo watermark over the videos. (Clarified later: the site must never add a watermark overlay, but the owner's own videos may have their Cursive Studios logo baked in, as posted on Instagram. Upload those as they are.)
+- Visitors can play videos but should not be able to download them: keep `controlslist="nodownload"` and `disablepictureinpicture` on every `<video>`, the right-click/drag block in `js/main.js`, and the `noindex` headers on `/content/ugc/videos/` and `/content/videos/` in `vercel.json` and `netlify.toml`.
 - Do not use LinkedIn anywhere. The only social channel is Instagram.
 - Keep the founder's personal name off the site. Use "Cursive Studios" only
 

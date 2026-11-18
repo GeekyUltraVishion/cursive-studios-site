@@ -103,6 +103,9 @@ h3 { font-weight: 500; font-stretch: 100%; letter-spacing: 0; }
 .credits .btn { margin-inline: auto; }
 .fill { padding: 0 0.25em; border: 1px dashed color-mix(in oklch, var(--color-muted) 70%, transparent); border-radius: 3px; color: var(--color-muted); -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
+/* Videos: no long-press save menu on phones */
+video { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+
 /* Footer: colophon */
 .site-footer { padding-block: var(--space-2xl) var(--space-xl); }
 .site-footer__row { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: var(--space-md) var(--space-xl); }

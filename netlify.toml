@@ -2,3 +2,16 @@
 [build]
   command = "rsync -a --exclude '.*' --exclude 'CLAUDE.md' --exclude 'netlify.toml' --exclude 'vercel.json' --exclude 'dist' --exclude 'tools' ./ dist/"
   publish = "dist"
+
+# Keep the raw video files out of search results and ask browsers to play, not save, them.
+[[headers]]
+  for = "/content/ugc/videos/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Content-Disposition = "inline"
+
+[[headers]]
+  for = "/content/videos/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Content-Disposition = "inline"

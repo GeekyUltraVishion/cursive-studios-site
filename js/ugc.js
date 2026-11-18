@@ -60,6 +60,7 @@
       vid = document.createElement('video');
       Object.assign(vid, { muted: true, loop: true, playsInline: true, preload: 'auto' });
       vid.setAttribute('muted', ''); vid.setAttribute('playsinline', ''); vid.setAttribute('aria-hidden', 'true');
+      vid.setAttribute('controlslist', 'nodownload'); vid.disablePictureInPicture = true;
       vid.src = videoUrl(v);
       card.querySelector('.ad__frame').prepend(vid);
     }

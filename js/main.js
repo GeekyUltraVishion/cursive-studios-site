@@ -21,6 +21,12 @@
     matchMedia('(min-width: 60.0625rem)').addEventListener('change', (e) => { if (e.matches) setOpen(false); });
   }
 
+  // Videos: no "Save video as" menu and no dragging the file out. This stops casual saving only;
+  // see content/ugc/README.md for what it can and cannot prevent.
+  const guarded = (t) => t instanceof Element && t.closest('video, .ad__frame, .card__media, .viewer__media, .player__stage, .work__media');
+  document.addEventListener('contextmenu', (e) => { if (guarded(e.target)) e.preventDefault(); });
+  document.addEventListener('dragstart', (e) => { if (guarded(e.target)) e.preventDefault(); });
+
   // 3. Footer year
   const year = document.querySelector('[data-year]');
   if (year) year.textContent = String(new Date().getFullYear());
