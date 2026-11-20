@@ -44,9 +44,9 @@
     document.querySelectorAll('[data-reveal]').forEach((el) => el.classList.add('is-in'));
   }
 
-  // Floating DM button: steps aside while the page's own contact block or the footer is on screen
+  // Floating DM button: steps aside while the page's own contact block, the footer, the hero buttons or the hero animation is on screen
   const dm = document.querySelector('.dm-float');
-  const away = [...document.querySelectorAll('#contact, .site-footer, .page-hero .actions')];
+  const away = [...document.querySelectorAll('#contact, .site-footer, .page-hero .actions, .hero .actions, .hero__frame')];
   if (dm && away.length && 'IntersectionObserver' in window) {
     const seen = new Set();
     const io2 = new IntersectionObserver((es) => { es.forEach((e) => (e.isIntersecting ? seen.add(e.target) : seen.delete(e.target))); dm.classList.toggle('is-away', seen.size > 0); });

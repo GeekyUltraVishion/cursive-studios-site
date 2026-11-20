@@ -254,7 +254,7 @@ export async function mount(el, { tier = 'full', start = 0 } = {}) {
   el.addEventListener('pointerleave', () => { pointerOn = 0; target.x = target.y = 0; });
 
   // Timeline: form, hold, then re-form into the next shape
-  const MORPH = 1.3, HOLD = 1.9, HOLD_ALL = 4.2;
+  const MORPH = 0.8, HOLD = 1.1, HOLD_ALL = 3;
   let step = 0, clock = 0;
   const next = () => {
     from.array.set(to.array);
