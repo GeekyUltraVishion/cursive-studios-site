@@ -10,60 +10,40 @@
   },
   "work": [
     {
-      "title": "Skincare brand",
+      "title": "Coffee brand",
       "service": "AI UGC ad",
       "placeholder": true,
-      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Woman_taking_a_dropper_of_CBD_oil.jpg/960px-Woman_taking_a_dropper_of_CBD_oil.jpg",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Espresso_Coffee_01.jpg/960px-Espresso_Coffee_01.jpg",
       "video": "",
-      "alt": "A hand squeezing a glass dropper over a small amber bottle",
-      "focus": "45% 50%",
-      "credit": {
-        "name": "elsaolofsson",
-        "url": "https://commons.wikimedia.org/wiki/File:Woman_taking_a_dropper_of_CBD_oil.jpg",
-        "licence": "CC BY 2.0"
-      }
+      "alt": "A cup of espresso with crema on a black saucer, seen from above",
+      "focus": "50% 50%"
     },
     {
       "title": "Residential building",
       "service": "Property motion graphics",
       "placeholder": true,
-      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Crest_kitchenette_motel_stairwell.jpg/960px-Crest_kitchenette_motel_stairwell.jpg",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Staircase_of_the_BGK_Building_%2826620981474%29.jpg/960px-Staircase_of_the_BGK_Building_%2826620981474%29.jpg",
       "video": "",
-      "alt": "A lit concrete stairwell glowing inside a dark building at night",
-      "focus": "55% 50%",
-      "credit": {
-        "name": "Sarah Clark",
-        "url": "https://commons.wikimedia.org/wiki/File:Crest_kitchenette_motel_stairwell.jpg",
-        "licence": "CC BY-SA 4.0"
-      }
+      "alt": "White stair edges in a dark stairwell beside a round glowing wall lamp",
+      "focus": "35% 50%"
     },
     {
-      "title": "Pet brand",
+      "title": "Bakery",
       "service": "AI UGC ad",
       "placeholder": true,
-      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg/960px-Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Castella_002.jpg/960px-Castella_002.jpg",
       "video": "",
-      "alt": "A ginger dog swimming in dark water, looking at the camera",
-      "focus": "60% 45%",
-      "credit": {
-        "name": "Basile Morin",
-        "url": "https://commons.wikimedia.org/wiki/File:Liver_yellow_dog_in_the_water_looking_at_viewer_at_golden_hour_in_Don_Det_Laos.jpg",
-        "licence": "CC BY-SA 4.0"
-      }
+      "alt": "Slices of sponge cake beside a glass of tea on a dark table",
+      "focus": "50% 50%"
     },
     {
-      "title": "Cocktail bar",
+      "title": "Cafe",
       "service": "Website design",
       "placeholder": true,
-      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Cure_cocktail_bar_New_Orleans_2011.jpg/960px-Cure_cocktail_bar_New_Orleans_2011.jpg",
+      "poster": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Vault_Caf%C3%A9_Central_Vienna_Wien.jpg/960px-Vault_Caf%C3%A9_Central_Vienna_Wien.jpg",
       "video": "",
-      "alt": "A dim cocktail bar with lit bottle shelves up to the ceiling",
-      "focus": "30% 50%",
-      "credit": {
-        "name": "Chelsea Marie Hicks",
-        "url": "https://commons.wikimedia.org/wiki/File:Cure_cocktail_bar_New_Orleans_2011.jpg",
-        "licence": "CC BY 2.0"
-      }
+      "alt": "A vaulted cafe ceiling with painted ribs and globe lamps hanging low",
+      "focus": "50% 40%"
     }
   ]
 }

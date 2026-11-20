@@ -120,7 +120,7 @@ Do this after section 3 works on the `netlify.app` address.
 Do this on your phone **and** on a computer.
 
 **Pages**
-- [ ] `/` loads, the copper ribbon moves (or a still image shows on older phones)
+- [ ] `/` loads, the chrome C turns slowly (or a still image shows on older phones)
 - [ ] `/ai-ugc-ads`, `/motion-graphics`, `/website-design`, `/3d-websites`, `/contact` all load
 - [ ] Clicking the logo on every page goes to the homepage
 - [ ] A made-up address like `/abc` shows the "This page is not here" page

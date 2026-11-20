@@ -39,11 +39,11 @@ Plain HTML, CSS and JavaScript. There is no framework, no database and no build 
 | After an enquiry | `/thanks` | `thanks.html` |
 | Page not found | any wrong address | `404.html` |
 
-**Look:** dark espresso background, ivory text, one copper accent. Fonts: Mona Sans for headings, Geist for body text. Everything visual is controlled from `css/settings.css`.
+**Look:** black and white: near-black background, white text, white main buttons. Only your logo keeps its copper. Fonts: Mona Sans for headings, Geist for body text. Everything visual is controlled from `css/settings.css`.
 
 **Features**
 
-- Homepage with a live 3D copper ribbon (Three.js), which becomes a still image on slow devices and under "reduce motion".
+- Homepage with a live 3D chrome letter C (Three.js), which becomes a still image on slow devices and under "reduce motion".
 - AI UGC Ads video gallery: category tabs, newest first, hover to preview on desktop, tap to preview on phones, full-screen player with sound, and a "Latest from Instagram" strip.
 - Style galleries on Motion Graphics, Website Design and 3D Websites, with filter tabs, previews and "Request this style" buttons.
 - A drag-to-turn 3D bottle on the 3D Websites page.
@@ -69,7 +69,7 @@ Several things on the site are still placeholders. Work through this list before
 | "What you get" text on each service page | written as a starting point | edit the page files (section 5.6) |
 | Enquiry form | built, not yet connected | [DEPLOY.md](DEPLOY.md), section 4 |
 
-Stand-in photos are tinted to match the site and credited in the footer as their licences require. When you replace them with your own work, delete their `credit` lines too.
+Stand-in photos are shown in black and white. Their licences require a credit, so the footer shows a small "Image credits" link to `/credits`, which lists them. When you replace a stand-in with your own work, delete its entry (with its `credit`). Once none are left, the link hides itself and `/credits` says every picture is your own.
 
 ---
 
@@ -163,13 +163,13 @@ Open `css/settings.css`. Every colour on the site comes from there. The main thr
 
 - `--color-paper`: background
 - `--color-ink`: text
-- `--color-accent`: copper buttons, links and the 3D ribbon
+- `--color-accent`: main buttons and link underlines (white)
 
 Colours are written as `oklch(lightness% chroma hue)`. Change a value, refresh the page and see.
 
 Fonts are stored in `fonts/` and declared at the top of `settings.css`. To swap a font, replace the `.woff2` files and the family names there, and update the two `<link rel="preload">` lines near the top of each page.
 
-If you change the colours, the 3D ribbon and bottle follow automatically. Their still images (`content/images/hero-ribbon-*`, `demo-bottle-*`) and the share images (`content/images/share/`) do not: ask Claude Code to re-capture them.
+If you change the colours, the 3D bottle follows automatically (the chrome C is always chrome). The still images (`content/images/hero-chrome-*`, `demo-bottle-*`) and the share images (`content/images/share/`) do not: ask Claude Code to re-capture them.
 
 ### 5.6 Change the words on a page
 
@@ -211,7 +211,7 @@ js/
   gallery.js      style galleries
   ugc.js          UGC video gallery and player
   contact.js      enquiry form
-  three/          3D: ribbon.js (homepage), product.js (bottle), support.js (device checks)
+  three/          3D: chrome.js (homepage), product.js (bottle), support.js (device checks)
   vendor/         Three.js library
 
 content/

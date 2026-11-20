@@ -111,8 +111,7 @@
     const uniq = credits.filter((c) => !seen.has(c.url) && seen.add(c.url));
     const line = document.querySelector('[data-credits]');
     if (!line) return;
-    line.hidden = uniq.length === 0;
-    line.innerHTML = 'Photographs: ' + uniq.map((c) => `<a href="${esc(c.url)}">${esc(c.name)}</a> (${esc(c.licence)})`).join(', ') + ', via Wikimedia Commons.';
+    line.hidden = uniq.length === 0;  // the names and licences are on /credits
   };
 
   Promise.all([

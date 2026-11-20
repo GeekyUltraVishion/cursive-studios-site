@@ -99,8 +99,7 @@
     const credits = [...data.work.slice(0, 4).filter((w) => w.placeholder).map((w) => w.credit)].filter(Boolean);
     const line = document.querySelector('[data-credits]');
     if (line) {
-      line.hidden = credits.length === 0;
-      line.innerHTML = 'Photographs: ' + credits.map((c) => `<a href="${esc(c.url)}">${esc(c.name)}</a> (${esc(c.licence)})`).join(', ') + ', via Wikimedia Commons.';
+      line.hidden = credits.length === 0;  // the names and licences are on /credits
     }
   };
 
