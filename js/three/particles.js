@@ -72,7 +72,7 @@ function cube(n) {
   const rot = new THREE.Matrix4().makeRotationFromEuler(new THREE.Euler(0.55, 0.72, 0));
   const out = new Float32Array(n * 3), p = new THREE.Vector3();
   for (let k = 0; k < n; k++) {
-    const [a, b] = edges[k % edges.length];
+    const [a, b] = edges[(Math.random() * edges.length) | 0];
     p.lerpVectors(a, b, Math.random()).add(new THREE.Vector3((Math.random() - 0.5) * 0.035, (Math.random() - 0.5) * 0.035, (Math.random() - 0.5) * 0.035)).applyMatrix4(rot);
     out.set([p.x, p.y, p.z], k * 3);
   }
@@ -148,7 +148,25 @@ export async function mount(el, { tier = 'full', start = 0 } = {}) {
     { name: 'Motion graphics', pts: sample(shapes.building, N) },
     { name: 'Website design', pts: sample(shapes.browser, N) },
     { name: '3D websites', pts: cube(N) },
+    { name: '', all: true, pts: null }, // last: all four services together, laid out to suit the frame
   ];
+  const services = steps.slice(1, 5);
+
+  // All four signs at once: side by side on a wide frame, two by two on a narrow one.
+  // Each point takes its place from one of the four shapes, so every sign keeps a quarter of the points.
+  const layout = () => {
+    const row = camera.aspect >= 1.9;
+    const scale = row ? 0.5 : 0.36;
+    const spots = row ? [[-2.25, 0.12], [-0.75, 0.12], [0.75, 0.12], [2.25, 0.12]] : [[-0.7, 0.66], [0.7, 0.66], [-0.7, -0.58], [0.7, -0.58]];
+    const pts = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      const k = i % 4, [ox, oy] = spots[k], src = services[k].pts;
+      pts[i * 3] = src[i * 3] * scale + ox;
+      pts[i * 3 + 1] = src[i * 3 + 1] * scale + oy;
+      pts[i * 3 + 2] = src[i * 3 + 2] * scale;
+    }
+    return { pts, labels: spots.map(([x, y]) => new THREE.Vector3(x, y - 1.18 * scale, 0)) };
+  };
 
   const ink = new THREE.Color().setRGB(...tokenRGB('--color-ink', [0.95, 0.95, 0.95]), THREE.SRGBColorSpace);
   const rand = new Float32Array(N * 4).map(() => Math.random());
@@ -189,6 +207,24 @@ export async function mount(el, { tier = 'full', start = 0 } = {}) {
   caption.textContent = steps[0].name;
   el.append(caption);
 
+  // ...and the four names under the signs in the last scene, placed by projecting each sign's foot onto the frame
+  const tags = document.createElement('div');
+  tags.className = 'hero__tags';
+  tags.setAttribute('aria-hidden', 'true');
+  const tagEls = services.map((sv) => { const t = document.createElement('span'); t.textContent = sv.name; tags.append(t); return t; });
+  tags.hidden = true;
+  el.append(tags);
+  let tagSpots = null;
+  const v = new THREE.Vector3();
+  const placeTags = () => {
+    if (!tagSpots) return;
+    tagSpots.forEach((p, i) => {
+      v.copy(p).applyMatrix4(group.matrixWorld).project(camera);
+      tagEls[i].style.left = `${((v.x + 1) / 2) * 100}%`;
+      tagEls[i].style.top = `${((1 - v.y) / 2) * 100}%`;
+    });
+  };
+
   // Size to the frame: the shapes fill about three quarters of the frame's height
   const fit = () => {
     const w = el.clientWidth, h = el.clientHeight;
@@ -218,29 +254,37 @@ export async function mount(el, { tier = 'full', start = 0 } = {}) {
   el.addEventListener('pointerleave', () => { pointerOn = 0; target.x = target.y = 0; });
 
   // Timeline: form, hold, then re-form into the next shape
-  const MORPH = 2.2, HOLD = 3.4;
+  const MORPH = 1.3, HOLD = 1.9, HOLD_ALL = 4.2;
   let step = 0, clock = 0;
   const next = () => {
     from.array.set(to.array);
     step = (step + 1) % steps.length;
-    to.array.set(steps[step].pts);
+    if (steps[step].all) { const l = layout(); to.array.set(l.pts); tagSpots = l.labels; tags.hidden = false; } else { to.array.set(steps[step].pts); tagSpots = null; tags.hidden = true; }
     from.needsUpdate = to.needsUpdate = true;
     clock = 0;
     uniforms.uScatter.value = 0.35 + Math.random() * 0.3;
     caption.classList.remove('is-shown');
+    tags.classList.remove('is-shown');
   };
 
   for (let i = 0; i < start; i++) next(); // start partway through (for re-capturing stills)
   let visible = true, paused = false, raf = 0, last = performance.now(), t = 0, skip = false;
   const pose = (dt) => {
     clock += dt;
-    if (clock > MORPH + HOLD) next();
+    const all = steps[step].all;
+    if (clock > MORPH + (all ? HOLD_ALL : HOLD)) next();
     uniforms.uMix.value = Math.min(clock / MORPH, 1);
-    if (clock > MORPH * 0.7 && !caption.classList.contains('is-shown')) { caption.textContent = steps[step].name; caption.classList.add('is-shown'); }
+    if (clock > MORPH * 0.7) {
+      if (all) tags.classList.add('is-shown');
+      else if (!caption.classList.contains('is-shown')) { caption.textContent = steps[step].name; caption.classList.add('is-shown'); }
+    }
     uniforms.uTime.value = t;
     uniforms.uPointer.value.z += (pointerOn - uniforms.uPointer.value.z) * 0.08;
-    group.rotation.y += (Math.sin(t * 0.3) * 0.22 + target.x - group.rotation.y) * 0.04;
-    group.rotation.x += (Math.sin(t * 0.23) * 0.06 - target.y - group.rotation.x) * 0.04;
+    const sway = all ? 0.25 : 1; // hold the row nearly still so the names stay under their signs
+    group.rotation.y += ((Math.sin(t * 0.3) * 0.22 + target.x) * sway - group.rotation.y) * 0.04;
+    group.rotation.x += ((Math.sin(t * 0.23) * 0.06 - target.y) * sway - group.rotation.x) * 0.04;
+    group.updateMatrixWorld();
+    placeTags();
   };
   const frame = (now) => {
     raf = 0;

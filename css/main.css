@@ -72,6 +72,10 @@ h3 { font-weight: 500; font-stretch: 100%; letter-spacing: 0; }
 .hero__frame.is-live picture { opacity: 0; }
 .hero__caption { position: absolute; left: var(--space-md); bottom: var(--space-sm); z-index: var(--z-raised); margin: 0; font-family: var(--font-display); font-size: var(--text-lg); color: var(--color-ink); transition: opacity var(--dur-long) var(--ease-out), transform var(--dur-long) var(--ease-out); }
 .hero__frame.is-live .hero__caption:not(.is-shown) { opacity: 0; transform: translateY(0.4em); }
+.hero__tags { position: absolute; inset: 0; z-index: var(--z-raised); pointer-events: none; transition: opacity var(--dur-long) var(--ease-out); }
+.hero__tags span { position: absolute; transform: translate(-50%, 0); white-space: nowrap; font-size: var(--text-md); color: var(--color-ink); }
+.hero__frame.is-live .hero__tags:not(.is-shown) { opacity: 0; }
+@media (max-width: 40rem) { .hero__tags span { font-size: var(--text-sm); } }
 .hero__motion { position: absolute; right: var(--space-sm); bottom: var(--space-sm); z-index: var(--z-raised); background: var(--color-paper); }
 .settle { animation: settle var(--dur-long) var(--ease-out) both; }
 @keyframes settle { from { opacity: 0.6; } }
@@ -154,7 +158,7 @@ video { -webkit-touch-callout: none; -webkit-user-select: none; user-select: non
   .js [data-reveal].is-in { opacity: 1; transform: none; }
 }
 
-@media (prefers-reduced-motion: reduce) { .settle { animation: none; } .hero__canvas, .hero__frame picture, .hero__caption { transition: none; } .btn, .link, .index__row { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .settle { animation: none; } .hero__canvas, .hero__frame picture, .hero__caption, .hero__tags { transition: none; } .btn, .link, .index__row { transition: none; } }
 
 @media (max-width: 60rem) {
   .hero { min-height: 0; }
