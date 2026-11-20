@@ -21,8 +21,8 @@
   const thumbUrl = (v) => (!v.thumb ? '' : isUrl(v.thumb) ? v.thumb : `content/ugc/thumbs/${v.thumb}`);
   const fmtDate = (d) => { const t = new Date(`${d}T12:00:00`); return Number.isNaN(+t) ? d : t.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }); };
 
-  let dmHref = 'https://ig.me/m/yourhandle';
-  let igHref = 'https://www.instagram.com/yourhandle/';
+  let dmHref = 'https://ig.me/m/cursive_studios';
+  let igHref = 'https://www.instagram.com/cursive_studios/';
   let videos = [];
   let cats = {};
   let filter = 'all';

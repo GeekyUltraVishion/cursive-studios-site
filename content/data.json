@@ -1,8 +1,8 @@
 {
   "contact": {
-    "placeholder": true,
-    "email": "hello@example.com",
-    "instagram": "yourhandle"
+    "placeholder": false,
+    "email": "contact.cursivestudios@gmail.com",
+    "instagram": "cursive_studios"
   },
   "form": {
     "provider": "netlify",

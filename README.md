@@ -43,7 +43,7 @@ Plain HTML, CSS and JavaScript. There is no framework, no database and no build 
 
 **Features**
 
-- Homepage with a live 3D chrome letter C (Three.js), which becomes a still image on slow devices and under "reduce motion".
+- Homepage with live 3D points of light (Three.js) that form the letter C, then a sign for each service, which becomes a still image on slow devices and under "reduce motion".
 - AI UGC Ads video gallery: category tabs, newest first, hover to preview on desktop, tap to preview on phones, full-screen player with sound, and a "Latest from Instagram" strip.
 - Style galleries on Motion Graphics, Website Design and 3D Websites, with filter tabs, previews and "Request this style" buttons.
 - A drag-to-turn 3D bottle on the 3D Websites page.
@@ -169,7 +169,7 @@ Colours are written as `oklch(lightness% chroma hue)`. Change a value, refresh t
 
 Fonts are stored in `fonts/` and declared at the top of `settings.css`. To swap a font, replace the `.woff2` files and the family names there, and update the two `<link rel="preload">` lines near the top of each page.
 
-If you change the colours, the 3D bottle follows automatically (the chrome C is always chrome). The still images (`content/images/hero-chrome-*`, `demo-bottle-*`) and the share images (`content/images/share/`) do not: ask Claude Code to re-capture them.
+If you change the colours, the 3D bottle follows automatically and so do the hero points (they use the ink colour). The still images (`content/images/hero-particles-*`, `demo-bottle-*`) and the share images (`content/images/share/`) do not: ask Claude Code to re-capture them.
 
 ### 5.6 Change the words on a page
 
@@ -211,7 +211,7 @@ js/
   gallery.js      style galleries
   ugc.js          UGC video gallery and player
   contact.js      enquiry form
-  three/          3D: chrome.js (homepage), product.js (bottle), support.js (device checks)
+  three/          3D: particles.js (homepage), product.js (bottle), support.js (device checks)
   vendor/         Three.js library
 
 content/

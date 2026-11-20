@@ -13,7 +13,7 @@
   const frame = root.dataset.frame === 'browser';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  let dmHref = 'https://ig.me/m/yourhandle';
+  let dmHref = 'https://ig.me/m/cursive_studios';
   let samples = [];
   let styleNames = {};
 
