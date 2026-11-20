@@ -164,6 +164,7 @@ video { -webkit-touch-callout: none; -webkit-user-select: none; user-select: non
   .hero { min-height: 0; }
   .hero__card { grid-template-columns: minmax(0, 1fr); }
   .hero__frame { width: 100%; height: auto; min-height: 0; aspect-ratio: 16 / 10; }
+  .hero__still { object-fit: contain; } /* the still is a wide lockup: show all of it */
   .index__row { grid-template-columns: minmax(0, 1fr); padding-inline: 0; }
   .index__link { justify-self: start; }
   .work { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: var(--space-lg); }

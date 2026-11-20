@@ -9,18 +9,18 @@ import { reducedMotion, tokenRGB } from './support.js';
 const PX = 512, UNIT = 200; // shapes are drawn on a 512px canvas; 200px = 1 unit in the scene
 
 // Draw a shape on a canvas and return n points sampled from its lit pixels.
-function sample(draw, n) {
-  const c = document.createElement('canvas'); c.width = c.height = PX;
+function sample(draw, n, W = PX, H = PX) {
+  const c = document.createElement('canvas'); c.width = W; c.height = H;
   const ctx = c.getContext('2d', { willReadFrequently: true });
   ctx.fillStyle = ctx.strokeStyle = '#fff'; ctx.lineJoin = ctx.lineCap = 'round';
-  draw(ctx);
-  const data = ctx.getImageData(0, 0, PX, PX).data, lit = [];
-  for (let i = 0; i < PX * PX; i++) if (data[i * 4 + 3] > 128) lit.push(i);
+  draw(ctx, W, H);
+  const data = ctx.getImageData(0, 0, W, H).data, lit = [];
+  for (let i = 0; i < W * H; i++) if (data[i * 4 + 3] > 128) lit.push(i);
   const out = new Float32Array(n * 3);
   for (let k = 0; k < n; k++) {
     const i = lit[(Math.random() * lit.length) | 0] ?? 0;
-    out[k * 3] = ((i % PX) + Math.random() - PX / 2) / UNIT;
-    out[k * 3 + 1] = -(((i / PX) | 0) + Math.random() - PX / 2) / UNIT;
+    out[k * 3] = ((i % W) + Math.random() - W / 2) / UNIT;
+    out[k * 3 + 1] = -(((i / W) | 0) + Math.random() - H / 2) / UNIT;
     out[k * 3 + 2] = (Math.random() - 0.5) * 0.08;
   }
   return out;
@@ -28,13 +28,39 @@ function sample(draw, n) {
 
 const roundRect = (ctx, x, y, w, h, r) => { ctx.beginPath(); ctx.roundRect(x, y, w, h, r); };
 
+// The opening: a big C with the name "Cursive Studios" written beside it (wide frames)
+// or under it (narrow frames), in the site's display face, centred on the canvas.
+function lockup(row) {
+  const W = row ? 1500 : 1000, H = row ? 640 : 800;
+  const draw = (part) => (ctx) => {
+    const face = (px) => `500 ${px}px "Mona Sans", system-ui, sans-serif`;
+    const box = (text, px) => { ctx.font = face(px); const m = ctx.measureText(text); return { w: m.actualBoundingBoxRight + m.actualBoundingBoxLeft, up: m.actualBoundingBoxAscent, down: m.actualBoundingBoxDescent, left: m.actualBoundingBoxLeft }; };
+    const cPx = row ? 400 : 280, cBox = box('C', cPx);
+    const maxText = row ? 1150 - cBox.w - 60 : 760;
+    let tPx = 120, tBox = box('Cursive Studios', tPx);
+    tPx = Math.min(tPx, (tPx * maxText) / tBox.w); tBox = box('Cursive Studios', tPx);
+    ctx.textBaseline = 'alphabetic';
+    if (row) {
+      const total = cBox.w + 60 + tBox.w, x0 = (W - total) / 2, cy = H / 2;
+      ctx.font = face(cPx); if (part === 'c') ctx.fillText('C', x0 + cBox.left, cy + (cBox.up - cBox.down) / 2);
+      ctx.font = face(tPx); if (part === 't') ctx.fillText('Cursive Studios', x0 + cBox.w + 60 + tBox.left, cy + (tBox.up - tBox.down) / 2);
+    } else {
+      const gap = 40, total = cBox.up + cBox.down + gap + tBox.up + tBox.down, y0 = (H - total) / 2 - 45; // a little high, clear of the Pause button
+      ctx.font = face(cPx); if (part === 'c') ctx.fillText('C', (W - cBox.w) / 2 + cBox.left, y0 + cBox.up);
+      ctx.font = face(tPx); if (part === 't') ctx.fillText('Cursive Studios', (W - tBox.w) / 2 + tBox.left, y0 + cBox.up + cBox.down + gap + tBox.up);
+    }
+  };
+  // the C and the name are sampled apart, so the thin letters get as many points as the big C
+  return (n) => {
+    const nc = Math.round(n * (row ? 0.42 : 0.5));
+    const out = new Float32Array(n * 3);
+    out.set(sample(draw('c'), nc, W, H));
+    out.set(sample(draw('t'), n - nc, W, H), nc * 3);
+    return out;
+  };
+}
+
 const shapes = {
-  // the studio's initial, in the site's display face
-  letter: (ctx) => {
-    ctx.font = '500 470px "Mona Sans", system-ui, sans-serif';
-    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
-    ctx.fillText('C', 262, 270);
-  },
   // AI UGC ads: a vertical video with a play button
   video: (ctx) => {
     ctx.lineWidth = 12; roundRect(ctx, 166, 46, 180, 420, 34); ctx.stroke();
@@ -143,7 +169,7 @@ export async function mount(el, { tier = 'full', start = 0 } = {}) {
 
   // The order the points play through, and the words shown under each
   const steps = [
-    { name: 'Cursive Studios', pts: sample(shapes.letter, N) },
+    { name: '', logo: true, pts: lockup(el.clientWidth / Math.max(1, el.clientHeight) >= 1.9)(N) }, // the name is written in points, so no caption
     { name: 'AI UGC ads', pts: sample(shapes.video, N) },
     { name: 'Motion graphics', pts: sample(shapes.building, N) },
     { name: 'Website design', pts: sample(shapes.browser, N) },
@@ -254,11 +280,12 @@ export async function mount(el, { tier = 'full', start = 0 } = {}) {
   el.addEventListener('pointerleave', () => { pointerOn = 0; target.x = target.y = 0; });
 
   // Timeline: form, hold, then re-form into the next shape
-  const MORPH = 0.8, HOLD = 1.1, HOLD_ALL = 3;
+  const MORPH = 0.55, HOLD = 0.75, HOLD_LOGO = 1.3, HOLD_ALL = 2.2;
   let step = 0, clock = 0;
   const next = () => {
     from.array.set(to.array);
     step = (step + 1) % steps.length;
+    if (steps[step].logo) steps[step].pts = lockup(camera.aspect >= 1.9)(N);
     if (steps[step].all) { const l = layout(); to.array.set(l.pts); tagSpots = l.labels; tags.hidden = false; } else { to.array.set(steps[step].pts); tagSpots = null; tags.hidden = true; }
     from.needsUpdate = to.needsUpdate = true;
     clock = 0;
@@ -272,7 +299,7 @@ export async function mount(el, { tier = 'full', start = 0 } = {}) {
   const pose = (dt) => {
     clock += dt;
     const all = steps[step].all;
-    if (clock > MORPH + (all ? HOLD_ALL : HOLD)) next();
+    if (clock > MORPH + (all ? HOLD_ALL : steps[step].logo ? HOLD_LOGO : HOLD)) next();
     uniforms.uMix.value = Math.min(clock / MORPH, 1);
     if (clock > MORPH * 0.7) {
       if (all) tags.classList.add('is-shown');
