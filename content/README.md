@@ -20,7 +20,7 @@ Add an entry to `work` in `data.json` (the first four are shown on the homepage)
 }
 ```
 
-Your own work shows in its true colours. Entries marked `"placeholder": true` are library stand-ins and are tinted to match the site; delete them as your own work comes in, along with their `credit`.
+Your own work shows in its true colours. Entries marked `"placeholder": true` are library stand-ins, shown in black and white and credited on `/credits`; delete them as your own work comes in, along with their `credit`.
 
 ## Contact details
 
@@ -54,7 +54,7 @@ Motion Graphics, Website Design and 3D Websites each read their own file: `motio
 - **New sample:** add an entry to `samples` with that style's `id`.
 - `thumb` is the card picture. If `video` is set, the card plays it while hovered and the preview opens a video player; otherwise the preview shows `image` (or `thumb`).
 - `url` is only used on Website Design, as the address in the browser frame.
-- Samples marked `"placeholder": true` are stand-ins (tinted to match the site, credited in the footer). Remove them, with their `credit`, as your own samples arrive.
+- Samples marked `"placeholder": true` are stand-ins (shown in black and white, credited on /credits). Remove them, with their `credit`, as your own samples arrive.
 - Every card's "Request this style" button opens your Instagram DM, using `contact.instagram` from `data.json`.
 
 ## Contact form

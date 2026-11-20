@@ -13,7 +13,7 @@
   const frame = root.dataset.frame === 'browser';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)');
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  let dmHref = 'https://ig.me/m/yourhandle';
+  let dmHref = 'https://ig.me/m/cursive_studios';
   let samples = [];
   let styleNames = {};
 
@@ -111,8 +111,7 @@
     const uniq = credits.filter((c) => !seen.has(c.url) && seen.add(c.url));
     const line = document.querySelector('[data-credits]');
     if (!line) return;
-    line.hidden = uniq.length === 0;
-    line.innerHTML = 'Photographs: ' + uniq.map((c) => `<a href="${esc(c.url)}">${esc(c.name)}</a> (${esc(c.licence)})`).join(', ') + ', via Wikimedia Commons.';
+    line.hidden = uniq.length === 0;  // the names and licences are on /credits
   };
 
   Promise.all([
